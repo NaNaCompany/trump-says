@@ -1,0 +1,1528 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-10-28T09:17:38.363761+00:00",
+  "coverage_status": "partial",
+  "total_records": 97084,
+  "text_records": 90390,
+  "metadata_only": 6694,
+  "timestamp_corrections": 823,
+  "content_counts": {
+    "text_unavailable": 4431,
+    "media_only": 2263,
+    "text": 90390
+  },
+  "platforms": {
+    "x": {
+      "count": 58851,
+      "text_count": 58851,
+      "first": "2009-05-04T18:54:25.000Z",
+      "last": "2025-12-25T02:12:53.000Z",
+      "last_text": "2025-12-25T02:12:53.000Z"
+    },
+    "truth": {
+      "count": 38233,
+      "text_count": 31539,
+      "first": "2022-02-14T15:54:32.528Z",
+      "last": "2026-10-28T04:33:41.670Z",
+      "last_text": "2026-05-02T23:12:54.339Z"
+    }
+  },
+  "chunks": [
+    {
+      "month": "2026-10",
+      "file": "data/2026-10.json",
+      "count": 766,
+      "text_count": 0,
+      "sha256": "b9e5b2a38439edbcdf58a3429a593ca7999e23fa246c581f72f39757a862728f"
+    },
+    {
+      "month": "2026-09",
+      "file": "data/2026-09.json",
+      "count": 589,
+      "text_count": 0,
+      "sha256": "362db5eef73fb36306b2c211d6a7f897db2f28ff396876742c174474715a51d0"
+    },
+    {
+      "month": "2026-08",
+      "file": "data/2026-08.json",
+      "count": 972,
+      "text_count": 0,
+      "sha256": "b6d53a4f157f95f510a5e41b1f6fc4f3facfc16e978a6d2215989b7f9a20defc"
+    },
+    {
+      "month": "2026-07",
+      "file": "data/2026-07.json",
+      "count": 706,
+      "text_count": 0,
+      "sha256": "cd0911d15beceb72ebf1bc80301ede0fa5508061c6ce1bf632733fa5328c9a7e"
+    },
+    {
+      "month": "2026-06",
+      "file": "data/2026-06.json",
+      "count": 644,
+      "text_count": 0,
+      "sha256": "4a12496d161582f7c7930f810e6d94bf86dd1f15db63e98bf9fe473500f3bfe1"
+    },
+    {
+      "month": "2026-05",
+      "file": "data/2026-05.json",
+      "count": 811,
+      "text_count": 22,
+      "sha256": "4e9e5e1a82bd92a39d14f581d37aa5c3d2ae445fdd3ceb8e608942653dbf0e33"
+    },
+    {
+      "month": "2026-04",
+      "file": "data/2026-04.json",
+      "count": 549,
+      "text_count": 26,
+      "sha256": "232bece401a68e59afa5e24a29f72503d215725689858ac533c075edc2532730"
+    },
+    {
+      "month": "2026-03",
+      "file": "data/2026-03.json",
+      "count": 538,
+      "text_count": 0,
+      "sha256": "bcbdedc5990e6b71505179f483ddeb62de392a9d46e92f06607d2ab07dcd0fd3"
+    },
+    {
+      "month": "2026-02",
+      "file": "data/2026-02.json",
+      "count": 555,
+      "text_count": 0,
+      "sha256": "411f79e59418cde635aca5d886dac61efd60b4a45591ce928fed78ba57cd0f09"
+    },
+    {
+      "month": "2026-01",
+      "file": "data/2026-01.json",
+      "count": 606,
+      "text_count": 0,
+      "sha256": "72eae1f611795ab93d07c7b858b7f548e5ea44a2dc567af1d93be20a93e579eb"
+    },
+    {
+      "month": "2025-12",
+      "file": "data/2025-12.json",
+      "count": 628,
+      "text_count": 628,
+      "sha256": "78691bb0666a22202c7681fe98174a1e198caf9c3416d143ee47bd3eaf2a9f0f"
+    },
+    {
+      "month": "2025-11",
+      "file": "data/2025-11.json",
+      "count": 627,
+      "text_count": 626,
+      "sha256": "29b7e53d1b5d340db0c3a558a136afa6756173915c1be057fc9c31eb419a400e"
+    },
+    {
+      "month": "2025-10",
+      "file": "data/2025-10.json",
+      "count": 494,
+      "text_count": 494,
+      "sha256": "dd4cdeb8ebd1c9a9e25ff5b33c84864d73a6d025dc222b15cf8ca758c8a11f31"
+    },
+    {
+      "month": "2025-09",
+      "file": "data/2025-09.json",
+      "count": 428,
+      "text_count": 428,
+      "sha256": "a4974d2f9eeec764b24fef495dac937687d673b04a5075ce50eb3323e77e2e96"
+    },
+    {
+      "month": "2025-08",
+      "file": "data/2025-08.json",
+      "count": 581,
+      "text_count": 580,
+      "sha256": "d05e73856affcfc78914c6192890c54c8ceeb176e99c4f073a4ef0b48ad0a90c"
+    },
+    {
+      "month": "2025-07",
+      "file": "data/2025-07.json",
+      "count": 636,
+      "text_count": 635,
+      "sha256": "b29c2367acfcaed27d7552f061fd96fa88c9e3b363196b79c798cf3c114e0976"
+    },
+    {
+      "month": "2025-06",
+      "file": "data/2025-06.json",
+      "count": 527,
+      "text_count": 527,
+      "sha256": "973bef5a4909c6c88d19f025cff42d65a66022dc31c0622a84ebf1bbcf2a7382"
+    },
+    {
+      "month": "2025-05",
+      "file": "data/2025-05.json",
+      "count": 542,
+      "text_count": 542,
+      "sha256": "a7d2bb732c08d3e5a1e6e36dbe5c25e4317ad856248d0ffd364cf87b8c1eb556"
+    },
+    {
+      "month": "2025-04",
+      "file": "data/2025-04.json",
+      "count": 482,
+      "text_count": 482,
+      "sha256": "76c0dc2814e81e9fb09a8dbc94ce1562aee18706e9b97f872c19a0624ffb5978"
+    },
+    {
+      "month": "2025-03",
+      "file": "data/2025-03.json",
+      "count": 671,
+      "text_count": 671,
+      "sha256": "1ede505d71063ea131a9872361bc460e60fe1f63a06a0895e6079df5962bee4d"
+    },
+    {
+      "month": "2025-02",
+      "file": "data/2025-02.json",
+      "count": 554,
+      "text_count": 554,
+      "sha256": "ed8e582b38a63ae8691f7570d6237863b323d82008593d36bc778ce9794e85ad"
+    },
+    {
+      "month": "2025-01",
+      "file": "data/2025-01.json",
+      "count": 479,
+      "text_count": 479,
+      "sha256": "54cc514dd60ab72f74c437c57d241e8bf8d5d1ee4b0f811945e9f36154af0757"
+    },
+    {
+      "month": "2024-12",
+      "file": "data/2024-12.json",
+      "count": 444,
+      "text_count": 444,
+      "sha256": "c3e6cd2868018af2592458e1e5cf2fa0fd8e488295a06d376a2d859693e8f0a8"
+    },
+    {
+      "month": "2024-11",
+      "file": "data/2024-11.json",
+      "count": 476,
+      "text_count": 476,
+      "sha256": "a34e59650f78fcf5136840f6e380920523abd3d12d83aaed3fa1a944b1f345ef"
+    },
+    {
+      "month": "2024-10",
+      "file": "data/2024-10.json",
+      "count": 1192,
+      "text_count": 1192,
+      "sha256": "2d754443e7e14f53b3507e7a594e32033f2240a2b28de7f78d435767f55405a4"
+    },
+    {
+      "month": "2024-09",
+      "file": "data/2024-09.json",
+      "count": 1061,
+      "text_count": 1061,
+      "sha256": "2645cf7ef4461165e220c9e709731cdf99562b849fb4cc8dcf0b7a199edc9ea2"
+    },
+    {
+      "month": "2024-08",
+      "file": "data/2024-08.json",
+      "count": 1257,
+      "text_count": 1257,
+      "sha256": "490242180e09da14a6d8af0df7efe9e1c01c4683a4c3e62d59fc488db5caa929"
+    },
+    {
+      "month": "2024-07",
+      "file": "data/2024-07.json",
+      "count": 713,
+      "text_count": 713,
+      "sha256": "3175e57334f37800efdbfd89e09b01627634d8be622846b4a9ecc4718990eab4"
+    },
+    {
+      "month": "2024-06",
+      "file": "data/2024-06.json",
+      "count": 815,
+      "text_count": 815,
+      "sha256": "5fa4f642b4e07a00c98e5cd0925a15651e47a0fa6792ad0b36140521578815ad"
+    },
+    {
+      "month": "2024-05",
+      "file": "data/2024-05.json",
+      "count": 1027,
+      "text_count": 1025,
+      "sha256": "747efc726a22fd9e7df9979333e93cdb9acdcf5a43ed787b1601307659e7294d"
+    },
+    {
+      "month": "2024-04",
+      "file": "data/2024-04.json",
+      "count": 889,
+      "text_count": 888,
+      "sha256": "44607ce448a76d713d40a62a9f7b188cacf038db1f15e300f7cd1b4daaea8919"
+    },
+    {
+      "month": "2024-03",
+      "file": "data/2024-03.json",
+      "count": 1043,
+      "text_count": 1043,
+      "sha256": "2ecfd1e1d30dba21be109f32d57171e2c155a2f2d6f257c6518838c3a8ce71b9"
+    },
+    {
+      "month": "2024-02",
+      "file": "data/2024-02.json",
+      "count": 921,
+      "text_count": 921,
+      "sha256": "eb1f62b92b081c3f18d2380a685fb09c0ba15e5a57f9273019334ec3e6f4d5bd"
+    },
+    {
+      "month": "2024-01",
+      "file": "data/2024-01.json",
+      "count": 1356,
+      "text_count": 1356,
+      "sha256": "3d328f9c079808e853bd4159dd6c7692c97e1e9eb4f801a9e4aa00238d7d7d67"
+    },
+    {
+      "month": "2023-12",
+      "file": "data/2023-12.json",
+      "count": 1063,
+      "text_count": 1063,
+      "sha256": "47c882f82e50cc6c09cb0e9a8bb7352b372a95e4bffcf6ccf76201b65ff0f4d2"
+    },
+    {
+      "month": "2023-11",
+      "file": "data/2023-11.json",
+      "count": 903,
+      "text_count": 903,
+      "sha256": "ef0f187d7e4118c3751988584d36d2f77d9bda668687c15fce79ec91c0120f1f"
+    },
+    {
+      "month": "2023-10",
+      "file": "data/2023-10.json",
+      "count": 930,
+      "text_count": 930,
+      "sha256": "fbf6e2218c77e0bc66b14add75009dfa8b816868e3951d3adee6aa7364779cf8"
+    },
+    {
+      "month": "2023-09",
+      "file": "data/2023-09.json",
+      "count": 983,
+      "text_count": 983,
+      "sha256": "c03ee56048b5f60df1d0d3899ee7e06c085a72444ab55ee1f81f422e2255c6aa"
+    },
+    {
+      "month": "2023-08",
+      "file": "data/2023-08.json",
+      "count": 1114,
+      "text_count": 1114,
+      "sha256": "066e8719a2df664826e2b02f0cd78ad5fcef5d210bf084673fbe8926f1fd294b"
+    },
+    {
+      "month": "2023-07",
+      "file": "data/2023-07.json",
+      "count": 908,
+      "text_count": 908,
+      "sha256": "98a8dc89d9bec92349d91536c23f6a60293ff1989e01a65d70625737351970ef"
+    },
+    {
+      "month": "2023-06",
+      "file": "data/2023-06.json",
+      "count": 777,
+      "text_count": 777,
+      "sha256": "7d203c07d3c4a6d9c674ba404441462269781805826f167cd76f062278b07c8a"
+    },
+    {
+      "month": "2023-05",
+      "file": "data/2023-05.json",
+      "count": 660,
+      "text_count": 660,
+      "sha256": "1cced116e5adf0ae607345103e737ddfa6f4d6895a95df735568f39eb838bb95"
+    },
+    {
+      "month": "2023-04",
+      "file": "data/2023-04.json",
+      "count": 599,
+      "text_count": 599,
+      "sha256": "9ccb163a7f2973f95b6e7421ae5e4b7856f35045f9174ccf42c0f2379fd22f23"
+    },
+    {
+      "month": "2023-03",
+      "file": "data/2023-03.json",
+      "count": 835,
+      "text_count": 835,
+      "sha256": "e873fe1180a5aef01bff03d038ad1e89f4335649d2857aca9681d2dc5d7755aa"
+    },
+    {
+      "month": "2023-02",
+      "file": "data/2023-02.json",
+      "count": 592,
+      "text_count": 592,
+      "sha256": "db1f333843d8694bbc55827fa25db590bbe9ebddaa7a77ea1bcf67f2c9f5a6d6"
+    },
+    {
+      "month": "2023-01",
+      "file": "data/2023-01.json",
+      "count": 722,
+      "text_count": 722,
+      "sha256": "107ac4e8868ff45f0aca7e7e46bd45724bb0570dcd299ecd40fa04920a81a8c3"
+    },
+    {
+      "month": "2022-12",
+      "file": "data/2022-12.json",
+      "count": 638,
+      "text_count": 638,
+      "sha256": "887d28bbdeb96f5862ada5707af267b04d080a10d5f289babcdbc46b63e63b84"
+    },
+    {
+      "month": "2022-11",
+      "file": "data/2022-11.json",
+      "count": 742,
+      "text_count": 742,
+      "sha256": "94277ce11e1e09343fc290730c052c91acc83d6770bd8199afd755de5f8031c4"
+    },
+    {
+      "month": "2022-10",
+      "file": "data/2022-10.json",
+      "count": 661,
+      "text_count": 661,
+      "sha256": "37fb42c4fb22a801d61f40977f072fb6554b21d7ae3c4a141b07856462f117c3"
+    },
+    {
+      "month": "2022-09",
+      "file": "data/2022-09.json",
+      "count": 612,
+      "text_count": 612,
+      "sha256": "d9eca42a9ca594ababff24a567d95f25f0312846a4e8a64430121f76731381e3"
+    },
+    {
+      "month": "2022-08",
+      "file": "data/2022-08.json",
+      "count": 584,
+      "text_count": 584,
+      "sha256": "11e8a6eb67076d257c19cc0b84731496ad4e3dc9dbf28b2079e57d144829312a"
+    },
+    {
+      "month": "2022-07",
+      "file": "data/2022-07.json",
+      "count": 359,
+      "text_count": 359,
+      "sha256": "d13de0e67189b8cec463f44168851955cb7bb9f91c29cba771c910adf0d008be"
+    },
+    {
+      "month": "2022-06",
+      "file": "data/2022-06.json",
+      "count": 272,
+      "text_count": 272,
+      "sha256": "86bb9b91b04506c17e908d651a7a1be5322f9b2e23b5db40003109707c938f7a"
+    },
+    {
+      "month": "2022-05",
+      "file": "data/2022-05.json",
+      "count": 293,
+      "text_count": 293,
+      "sha256": "d377207839e4d9a7206c1033cfd75d0042318ffeb6fc49db5cb0610a49be6d2c"
+    },
+    {
+      "month": "2022-04",
+      "file": "data/2022-04.json",
+      "count": 9,
+      "text_count": 9,
+      "sha256": "5624ba463222695db166a77ae62d2e1aaeb3e10621126a40f33585ca6f93ca45"
+    },
+    {
+      "month": "2022-02",
+      "file": "data/2022-02.json",
+      "count": 1,
+      "text_count": 1,
+      "sha256": "804b4b4372aa9f9135eeffb22453572617802295a636a3f12d58b8f1e7b9e813"
+    },
+    {
+      "month": "2021-01",
+      "file": "data/2021-01.json",
+      "count": 156,
+      "text_count": 156,
+      "sha256": "1350a667a9cb3debabadc698883b7b919bd6ac3df3eafb462bb2c8271298905c"
+    },
+    {
+      "month": "2020-12",
+      "file": "data/2020-12.json",
+      "count": 646,
+      "text_count": 646,
+      "sha256": "8af65d6aacb8b13371e2b89286934853a44a708060534fc0dc90aff1d3e7b2df"
+    },
+    {
+      "month": "2020-11",
+      "file": "data/2020-11.json",
+      "count": 914,
+      "text_count": 914,
+      "sha256": "ccd17ddd72841fe1b25b84fc6abbd14ad8c996cf22eee6e36db779eeba9fec0e"
+    },
+    {
+      "month": "2020-10",
+      "file": "data/2020-10.json",
+      "count": 1415,
+      "text_count": 1415,
+      "sha256": "e031154d5c020ea79182fc8e4954507bdcc34e7874f6ebbb43c792b9f213fa9c"
+    },
+    {
+      "month": "2020-09",
+      "file": "data/2020-09.json",
+      "count": 1363,
+      "text_count": 1363,
+      "sha256": "66391a619bd64fb5fcff6d251341c3f048bad2fb891aa012612af62518404158"
+    },
+    {
+      "month": "2020-08",
+      "file": "data/2020-08.json",
+      "count": 1121,
+      "text_count": 1121,
+      "sha256": "53f601cba9de8cc8086839153d24b58fcbd8e0133156bbded0c1dee5fcc64754"
+    },
+    {
+      "month": "2020-07",
+      "file": "data/2020-07.json",
+      "count": 872,
+      "text_count": 872,
+      "sha256": "d1b9d856a2df3b87db2a3de1b3194fb06a5bd0be7084689eeb8f5688235064c2"
+    },
+    {
+      "month": "2020-06",
+      "file": "data/2020-06.json",
+      "count": 1121,
+      "text_count": 1121,
+      "sha256": "85a97da307b3c366d508d29815e85253cdf29114b82b51af070b1f7a8a72ce4d"
+    },
+    {
+      "month": "2020-05",
+      "file": "data/2020-05.json",
+      "count": 1121,
+      "text_count": 1121,
+      "sha256": "e67451f1c3a11e081734edeafab07256c9780bbbc9100c8cb99cd485cd264acf"
+    },
+    {
+      "month": "2020-04",
+      "file": "data/2020-04.json",
+      "count": 841,
+      "text_count": 841,
+      "sha256": "d3d0765d8cc30f11deed9a2d721f0140c7e97c18876cb98046d297330247d79d"
+    },
+    {
+      "month": "2020-03",
+      "file": "data/2020-03.json",
+      "count": 971,
+      "text_count": 971,
+      "sha256": "12b420a4e00615de9bcfd6b095fb1a7cd3488077745fd3931c3c5b1628133c24"
+    },
+    {
+      "month": "2020-02",
+      "file": "data/2020-02.json",
+      "count": 899,
+      "text_count": 899,
+      "sha256": "c627e6cfcfadb6a5a6975b16ae765605bc3733a03b64cb0432303ae0e5e495fd"
+    },
+    {
+      "month": "2020-01",
+      "file": "data/2020-01.json",
+      "count": 965,
+      "text_count": 965,
+      "sha256": "3f16481ef70c06886915aa315acb987facfdb7c2ffb412a4f657624a477bc5c6"
+    },
+    {
+      "month": "2019-12",
+      "file": "data/2019-12.json",
+      "count": 1129,
+      "text_count": 1129,
+      "sha256": "87e340151bef9718cd48f67c9be536c2e61a0ee2aec2e8ec2c5410e6a1e33b55"
+    },
+    {
+      "month": "2019-11",
+      "file": "data/2019-11.json",
+      "count": 865,
+      "text_count": 865,
+      "sha256": "9c2bf812df7cf1ce84c3b8629c41c662c1a6fff908d918c3a8bfb832042e3a83"
+    },
+    {
+      "month": "2019-10",
+      "file": "data/2019-10.json",
+      "count": 1020,
+      "text_count": 1020,
+      "sha256": "b2ae7ad0fbf0be3df5f47cdb2d5aefc39793d781194f7e7e045cf2e8dd6202de"
+    },
+    {
+      "month": "2019-09",
+      "file": "data/2019-09.json",
+      "count": 799,
+      "text_count": 799,
+      "sha256": "f6f3282b30c6d99fff5a6f56104992adf61a8a96d921bfe11ddebfd9560417d9"
+    },
+    {
+      "month": "2019-08",
+      "file": "data/2019-08.json",
+      "count": 694,
+      "text_count": 694,
+      "sha256": "3ba6b464d128389e0906bf365040aff1540f010005377f8cd9ccf050fdc1f213"
+    },
+    {
+      "month": "2019-07",
+      "file": "data/2019-07.json",
+      "count": 692,
+      "text_count": 692,
+      "sha256": "34ff6f3fdc80fc072f2d54608efed6cde213ef9e1fc4179f10d9fecfa3bc2f02"
+    },
+    {
+      "month": "2019-06",
+      "file": "data/2019-06.json",
+      "count": 489,
+      "text_count": 489,
+      "sha256": "d00463037330d95b7917a21cd078a2a435080bf705b51d9dca42702a493a1855"
+    },
+    {
+      "month": "2019-05",
+      "file": "data/2019-05.json",
+      "count": 695,
+      "text_count": 695,
+      "sha256": "ddac018704f50ef3505ef655beb2952418da5d320431ef1ffc8fc66fd3464f08"
+    },
+    {
+      "month": "2019-04",
+      "file": "data/2019-04.json",
+      "count": 434,
+      "text_count": 434,
+      "sha256": "543b59c03f7ce754deb33ff9885ad7d9444b2069dd4785537a2f8217c87209f7"
+    },
+    {
+      "month": "2019-03",
+      "file": "data/2019-03.json",
+      "count": 405,
+      "text_count": 405,
+      "sha256": "37517c3048f77fb65f059f9203489e14a327eb6dbc2045afdda6e21d8896e690"
+    },
+    {
+      "month": "2019-02",
+      "file": "data/2019-02.json",
+      "count": 250,
+      "text_count": 250,
+      "sha256": "08e8740e232c98cb027b8f611629610635952869a6cb949139c770c80ba5e085"
+    },
+    {
+      "month": "2019-01",
+      "file": "data/2019-01.json",
+      "count": 369,
+      "text_count": 369,
+      "sha256": "a45d22dc8dc93908181ede56b89767c7df101f7720b9ee3aa06f1a2210bfa428"
+    },
+    {
+      "month": "2018-12",
+      "file": "data/2018-12.json",
+      "count": 294,
+      "text_count": 294,
+      "sha256": "d7782e06412f927e72759f8e420cd8f3b1476d0396258e13d383af142f0cd561"
+    },
+    {
+      "month": "2018-11",
+      "file": "data/2018-11.json",
+      "count": 338,
+      "text_count": 338,
+      "sha256": "a7a8accc54ded58cf414342f25d7765faa64d24bbc54f88dd32e1cc310455aad"
+    },
+    {
+      "month": "2018-10",
+      "file": "data/2018-10.json",
+      "count": 387,
+      "text_count": 387,
+      "sha256": "eb3c1a9a0933c1b243c3b64d44610a62631feeebeb9f8bba7c453134b379d788"
+    },
+    {
+      "month": "2018-09",
+      "file": "data/2018-09.json",
+      "count": 386,
+      "text_count": 386,
+      "sha256": "23e7ea46c5fe13b1a948cc1981ae14294b81c02e2cdf48345817972fe0042a92"
+    },
+    {
+      "month": "2018-08",
+      "file": "data/2018-08.json",
+      "count": 381,
+      "text_count": 381,
+      "sha256": "b7bd2af83b1dcfec2bc423532754c1a0863affded2aab4ece3a2642af0261aad"
+    },
+    {
+      "month": "2018-07",
+      "file": "data/2018-07.json",
+      "count": 336,
+      "text_count": 336,
+      "sha256": "f60206d595bbfcd662d583653d3b9c72d720f818c7b2292d98823b00ffb233df"
+    },
+    {
+      "month": "2018-06",
+      "file": "data/2018-06.json",
+      "count": 386,
+      "text_count": 386,
+      "sha256": "f082e810bd23010825092bba64eb218530aac926259d3e5f7fe70dc53c11083c"
+    },
+    {
+      "month": "2018-05",
+      "file": "data/2018-05.json",
+      "count": 259,
+      "text_count": 259,
+      "sha256": "c6c86454315ce20de566a1c29bc7fbf469d2d3ea1cd283bb4f71faeb94db06e3"
+    },
+    {
+      "month": "2018-04",
+      "file": "data/2018-04.json",
+      "count": 257,
+      "text_count": 257,
+      "sha256": "bd7497a4b06c15ebf692e29c6cd41383fefb83fe811bf8fd4f90b9fd7163fe1b"
+    },
+    {
+      "month": "2018-03",
+      "file": "data/2018-03.json",
+      "count": 171,
+      "text_count": 171,
+      "sha256": "f7ca02d557ca06084b410b1c253034f86848897bd941704fbe8ff3a66478dab4"
+    },
+    {
+      "month": "2018-02",
+      "file": "data/2018-02.json",
+      "count": 175,
+      "text_count": 175,
+      "sha256": "a74446694dc0884a6089ff4e724ced8caafc0687bca15de5ba5eb053084474b6"
+    },
+    {
+      "month": "2018-01",
+      "file": "data/2018-01.json",
+      "count": 209,
+      "text_count": 209,
+      "sha256": "e3a07645bbb719556d84b35be5033a1a845354a4f499636f0e2145d51d03b899"
+    },
+    {
+      "month": "2017-12",
+      "file": "data/2017-12.json",
+      "count": 199,
+      "text_count": 199,
+      "sha256": "e66e4548f1de4b890df86dbf37a20a0b633f9b978d9e890f208a36650fb76a4e"
+    },
+    {
+      "month": "2017-11",
+      "file": "data/2017-11.json",
+      "count": 262,
+      "text_count": 262,
+      "sha256": "147f99e9057d32e41c6bff0f8d9882e9eab98880ac4370a378ebab162c938bc2"
+    },
+    {
+      "month": "2017-10",
+      "file": "data/2017-10.json",
+      "count": 291,
+      "text_count": 291,
+      "sha256": "bd083f9e0068af4abc5f2af3c6357c2cb075e121a29c620f301c7a4eb9b019b4"
+    },
+    {
+      "month": "2017-09",
+      "file": "data/2017-09.json",
+      "count": 307,
+      "text_count": 307,
+      "sha256": "f5a974247a2458c5c67a893c775ae441671e2edb733df4feb7b00be3bbf8c670"
+    },
+    {
+      "month": "2017-08",
+      "file": "data/2017-08.json",
+      "count": 268,
+      "text_count": 268,
+      "sha256": "6607d69e4dd6da1925b1db77f940a47e5bef81c6625ca67b4bdcfb34d99e3bb4"
+    },
+    {
+      "month": "2017-07",
+      "file": "data/2017-07.json",
+      "count": 247,
+      "text_count": 247,
+      "sha256": "bb7da174f159301337f86936ab92506b6aea2439b9906c0f957713f4028430a7"
+    },
+    {
+      "month": "2017-06",
+      "file": "data/2017-06.json",
+      "count": 213,
+      "text_count": 213,
+      "sha256": "7d94166248b9876a209247023a3d431b8ee5caf6aaedc8158afa6e272a7e0263"
+    },
+    {
+      "month": "2017-05",
+      "file": "data/2017-05.json",
+      "count": 156,
+      "text_count": 156,
+      "sha256": "574f35ee4e333e13b248fb7f5e231c2ea57d44ee28ac7abd5c44b7d0655fa155"
+    },
+    {
+      "month": "2017-04",
+      "file": "data/2017-04.json",
+      "count": 152,
+      "text_count": 152,
+      "sha256": "c7bc3bdefc8a0bc4a77103b1ba35bc16a9a6910d9a58e05e11c771320d21a762"
+    },
+    {
+      "month": "2017-03",
+      "file": "data/2017-03.json",
+      "count": 147,
+      "text_count": 147,
+      "sha256": "994c682c393654ada5094db0521ea1f3723ffab021ee2b1bc7b8f087422c1188"
+    },
+    {
+      "month": "2017-02",
+      "file": "data/2017-02.json",
+      "count": 154,
+      "text_count": 154,
+      "sha256": "64e83e996f57a5006d1cb997bdb6988109f8e9022c875ea285a0301c09dcb528"
+    },
+    {
+      "month": "2017-01",
+      "file": "data/2017-01.json",
+      "count": 221,
+      "text_count": 221,
+      "sha256": "0ae8f00ce182712f694273ac33a36be364d4bdb46caee210ac08a4d7f65ae25b"
+    },
+    {
+      "month": "2016-12",
+      "file": "data/2016-12.json",
+      "count": 143,
+      "text_count": 143,
+      "sha256": "78195e8d5749e37cfa4cb0ba48490d71d1b78d70c4a6a5a59b28b53417ef57bb"
+    },
+    {
+      "month": "2016-11",
+      "file": "data/2016-11.json",
+      "count": 198,
+      "text_count": 198,
+      "sha256": "de74e42732813327c24513423e2ae281e727650d1ebd65aa405e810acc3dd605"
+    },
+    {
+      "month": "2016-10",
+      "file": "data/2016-10.json",
+      "count": 529,
+      "text_count": 529,
+      "sha256": "51ccb7a3aba5dd874a8705b2d11ede2588bda933b5ac2b149197d7db7e6bcfd7"
+    },
+    {
+      "month": "2016-09",
+      "file": "data/2016-09.json",
+      "count": 313,
+      "text_count": 313,
+      "sha256": "01d634a52c787fbb194944f67238835fa9dc39e0b73339617f8ee9d7560e9c88"
+    },
+    {
+      "month": "2016-08",
+      "file": "data/2016-08.json",
+      "count": 333,
+      "text_count": 333,
+      "sha256": "dc28869cf4ed053265cb9ab69aa7310c43cf776cd09f2956a2315072c68bb42c"
+    },
+    {
+      "month": "2016-07",
+      "file": "data/2016-07.json",
+      "count": 388,
+      "text_count": 388,
+      "sha256": "2dee3e619b384fa19bd1bb3c677372f1bb6d25aa075cea79982b5bef588502e5"
+    },
+    {
+      "month": "2016-06",
+      "file": "data/2016-06.json",
+      "count": 316,
+      "text_count": 316,
+      "sha256": "b2b0b65772f36bd8483e9754a222efdb8e21fd4a745577c5440a6ec695539838"
+    },
+    {
+      "month": "2016-05",
+      "file": "data/2016-05.json",
+      "count": 370,
+      "text_count": 370,
+      "sha256": "8d4bdeffad89c8b934dd3802362dd51aedaead0a52021541513585242f628081"
+    },
+    {
+      "month": "2016-04",
+      "file": "data/2016-04.json",
+      "count": 299,
+      "text_count": 299,
+      "sha256": "d14d517ee26db4943b7ef8602333957130c19b8b2010b0c49a203c95dead4817"
+    },
+    {
+      "month": "2016-03",
+      "file": "data/2016-03.json",
+      "count": 477,
+      "text_count": 477,
+      "sha256": "e48fa1122718935b7115825abf78f2f10a881ecb473213e2e4e6e1cb3158e49d"
+    },
+    {
+      "month": "2016-02",
+      "file": "data/2016-02.json",
+      "count": 528,
+      "text_count": 528,
+      "sha256": "c1d3061ebe84ca992341157bdf7d564f6b9c28c049607d819be1639a67cf97b5"
+    },
+    {
+      "month": "2016-01",
+      "file": "data/2016-01.json",
+      "count": 503,
+      "text_count": 503,
+      "sha256": "1ba3e5ceba052c80a4e647e8c5c5900df9e2391ce2b2c1e925d09f97d9da3e40"
+    },
+    {
+      "month": "2015-12",
+      "file": "data/2015-12.json",
+      "count": 622,
+      "text_count": 622,
+      "sha256": "665de5ab88b7e2250950c6042517d2dad8a7a38496caf9c737bdcdc3ca1dcf42"
+    },
+    {
+      "month": "2015-11",
+      "file": "data/2015-11.json",
+      "count": 597,
+      "text_count": 597,
+      "sha256": "89b97bc6f6086dcce3d3659049a444b913c234e0d5d472a5331cfcb35890ec28"
+    },
+    {
+      "month": "2015-10",
+      "file": "data/2015-10.json",
+      "count": 805,
+      "text_count": 805,
+      "sha256": "a06cf888023630c67ebe66516d01497ab4cc0422217471f586a71b76ee1d7704"
+    },
+    {
+      "month": "2015-09",
+      "file": "data/2015-09.json",
+      "count": 426,
+      "text_count": 426,
+      "sha256": "89b353c06f8a0bc5d9ff2cc272a715a9d371d2a25cf0ba4b495021efd81c1e52"
+    },
+    {
+      "month": "2015-08",
+      "file": "data/2015-08.json",
+      "count": 365,
+      "text_count": 365,
+      "sha256": "bf3b6630757dfd5a28858b74c956d9041311c514f8d573de9a981454ed502d7a"
+    },
+    {
+      "month": "2015-07",
+      "file": "data/2015-07.json",
+      "count": 799,
+      "text_count": 799,
+      "sha256": "4ef3814081b2d4ef78ed69bd0758e6a78282a59a51a9a02957904b26c858062e"
+    },
+    {
+      "month": "2015-06",
+      "file": "data/2015-06.json",
+      "count": 540,
+      "text_count": 540,
+      "sha256": "946fc54ea6c0df74868e986a0f2d673b86fb7866ff836ae51eb06e49333f58b3"
+    },
+    {
+      "month": "2015-05",
+      "file": "data/2015-05.json",
+      "count": 713,
+      "text_count": 713,
+      "sha256": "7065ab30329f2b226f236f887cdc094f47e9ba375563416d97c3163f769e2824"
+    },
+    {
+      "month": "2015-04",
+      "file": "data/2015-04.json",
+      "count": 815,
+      "text_count": 815,
+      "sha256": "925abd5a2ff75cfc1ac6a02a6f6ab7d9cb721b88482e88cf5746704930cf889b"
+    },
+    {
+      "month": "2015-03",
+      "file": "data/2015-03.json",
+      "count": 416,
+      "text_count": 416,
+      "sha256": "3edbc1ecfde6dfa356afcdf237dcdd0e371d92cefc7db5296492019e2cf36009"
+    },
+    {
+      "month": "2015-02",
+      "file": "data/2015-02.json",
+      "count": 507,
+      "text_count": 507,
+      "sha256": "15f25d33a347570887eff92aeb71918a622dfd54002f9f73b31cf51a85dcc826"
+    },
+    {
+      "month": "2015-01",
+      "file": "data/2015-01.json",
+      "count": 1156,
+      "text_count": 1156,
+      "sha256": "00d69ccb3a1bb253aa1419416e9fce3906f69af99decb7bc2ed5a16cf18df262"
+    },
+    {
+      "month": "2014-12",
+      "file": "data/2014-12.json",
+      "count": 718,
+      "text_count": 718,
+      "sha256": "3dca26f62c0002d27c31c9fdeaf33a462a29c6c42f19ae214f687e631f53a0c1"
+    },
+    {
+      "month": "2014-11",
+      "file": "data/2014-11.json",
+      "count": 584,
+      "text_count": 584,
+      "sha256": "1c706bb7bf4029dcf651fc8f6a1f568fd2cbdec9cfa8fcbd65d14712fd10c0c1"
+    },
+    {
+      "month": "2014-10",
+      "file": "data/2014-10.json",
+      "count": 623,
+      "text_count": 623,
+      "sha256": "63c60aaed997e962f9c8169700d1797193ea8c9bd1a0ee01485e10b873cea077"
+    },
+    {
+      "month": "2014-09",
+      "file": "data/2014-09.json",
+      "count": 503,
+      "text_count": 503,
+      "sha256": "d826d2817a53043a6508f5cf31d617ef91a66eac63ec30cb4db162ee4eb833f2"
+    },
+    {
+      "month": "2014-08",
+      "file": "data/2014-08.json",
+      "count": 349,
+      "text_count": 349,
+      "sha256": "4388cc49dfff090f85865ebe9b65b1203d946031ab154c985238d2a3182cffb1"
+    },
+    {
+      "month": "2014-07",
+      "file": "data/2014-07.json",
+      "count": 485,
+      "text_count": 485,
+      "sha256": "36201d40cca18458d6f45f0f0cca7bfe0d22ef43d61d7a754e99efffbc8868de"
+    },
+    {
+      "month": "2014-06",
+      "file": "data/2014-06.json",
+      "count": 763,
+      "text_count": 763,
+      "sha256": "c2c1790766e2d225e10d6fc656f064b2aa88491740ed2fe17212eb6ecf13a637"
+    },
+    {
+      "month": "2014-05",
+      "file": "data/2014-05.json",
+      "count": 389,
+      "text_count": 389,
+      "sha256": "3a5c6d61710f17cc8852abfd4668d7f7f47b0c15537d73dc213b58ce718f5288"
+    },
+    {
+      "month": "2014-04",
+      "file": "data/2014-04.json",
+      "count": 528,
+      "text_count": 528,
+      "sha256": "563307c14e77b1ed6e5d67cd7c205ee904e8fbab7f2f5d2036083c43c27b8fef"
+    },
+    {
+      "month": "2014-03",
+      "file": "data/2014-03.json",
+      "count": 400,
+      "text_count": 400,
+      "sha256": "50a5d90bcf0e5e726d6155f63a1f7665f59d61bde5873d727fd22f10228c4db1"
+    },
+    {
+      "month": "2014-02",
+      "file": "data/2014-02.json",
+      "count": 305,
+      "text_count": 305,
+      "sha256": "27d583cfdd4438ca072ea61c9f7d23f1635bddb9b9361fc5d465018b83f53ebd"
+    },
+    {
+      "month": "2014-01",
+      "file": "data/2014-01.json",
+      "count": 365,
+      "text_count": 365,
+      "sha256": "4eb2fbea0659dd9b0c7c421e5508de184147e51897bd3fd8e613fd3e97874c1f"
+    },
+    {
+      "month": "2013-12",
+      "file": "data/2013-12.json",
+      "count": 376,
+      "text_count": 376,
+      "sha256": "b910d41bdac9f0f5ab5d596ff61ceb559089b4a0e3259ed73029889bcf9c1edc"
+    },
+    {
+      "month": "2013-11",
+      "file": "data/2013-11.json",
+      "count": 380,
+      "text_count": 380,
+      "sha256": "c1c35d3e95f10e580289d417b2b52c75f194efe1f984f97b73f6c4ae9a0a9c6c"
+    },
+    {
+      "month": "2013-10",
+      "file": "data/2013-10.json",
+      "count": 565,
+      "text_count": 565,
+      "sha256": "539656d9d67ac4957fc8e2b5088489b9a798b1f9085a60a092a292aa132d8f87"
+    },
+    {
+      "month": "2013-09",
+      "file": "data/2013-09.json",
+      "count": 676,
+      "text_count": 676,
+      "sha256": "f0c7cdfc20d04e6bfca9fa51fd1690d4ffedb47bd92e254052236ad9e8a4db68"
+    },
+    {
+      "month": "2013-08",
+      "file": "data/2013-08.json",
+      "count": 730,
+      "text_count": 730,
+      "sha256": "0fd7ae1ee3963d57d5bb82ef958f889e613ceab77ea47d29f654be6705f3eff3"
+    },
+    {
+      "month": "2013-07",
+      "file": "data/2013-07.json",
+      "count": 871,
+      "text_count": 871,
+      "sha256": "f492dc07da3ecd728a7d82da8b5c440e31384cb9162f89ce58e12a607465c9ff"
+    },
+    {
+      "month": "2013-06",
+      "file": "data/2013-06.json",
+      "count": 470,
+      "text_count": 470,
+      "sha256": "3c51644aeadf055be650068a2907c83768885af38b869b0d8a405565419f60b8"
+    },
+    {
+      "month": "2013-05",
+      "file": "data/2013-05.json",
+      "count": 789,
+      "text_count": 789,
+      "sha256": "0100a51d64238e6bdfcabace984bd1c044e8e1600413d4d45b197798384317b3"
+    },
+    {
+      "month": "2013-04",
+      "file": "data/2013-04.json",
+      "count": 917,
+      "text_count": 917,
+      "sha256": "7d82af3fa4cfe325233affad40424c6e7cf0c46efbb9bc06e97678cac484aa00"
+    },
+    {
+      "month": "2013-03",
+      "file": "data/2013-03.json",
+      "count": 850,
+      "text_count": 850,
+      "sha256": "ae51bf8d51ded036f0e351e3347e06ddfb3f2f39099d8442c13f39602a7ea780"
+    },
+    {
+      "month": "2013-02",
+      "file": "data/2013-02.json",
+      "count": 925,
+      "text_count": 925,
+      "sha256": "9c5ddfce6b231d4bc536b793eea4cd70ed4b0bc3f2f465aaba5f274e18745992"
+    },
+    {
+      "month": "2013-01",
+      "file": "data/2013-01.json",
+      "count": 814,
+      "text_count": 814,
+      "sha256": "a5f01fa15dfb5af1af2db39cb10fd26c144411e7380a766e69b67ce9a4cd6cba"
+    },
+    {
+      "month": "2012-12",
+      "file": "data/2012-12.json",
+      "count": 455,
+      "text_count": 455,
+      "sha256": "d9ed791e239e63e2b854ff2138713a4768d7af3e3cb099856f7ec26048c96961"
+    },
+    {
+      "month": "2012-11",
+      "file": "data/2012-11.json",
+      "count": 560,
+      "text_count": 560,
+      "sha256": "894267d37d0e784615d00a6e3ef2fac1509748e2e71a3a150dbd1b3c2dbd449c"
+    },
+    {
+      "month": "2012-10",
+      "file": "data/2012-10.json",
+      "count": 766,
+      "text_count": 766,
+      "sha256": "b782cbf71b77e40796eced66bee8967fbd44411ef8d2f50f1f6a9c2e9a808d81"
+    },
+    {
+      "month": "2012-09",
+      "file": "data/2012-09.json",
+      "count": 414,
+      "text_count": 414,
+      "sha256": "8aa0b686329e4b6d0cbbf00c1d73df2aaaa96cedbb2adfaedd9b01b39ba73b04"
+    },
+    {
+      "month": "2012-08",
+      "file": "data/2012-08.json",
+      "count": 376,
+      "text_count": 376,
+      "sha256": "952d5633a3a2d73a3c7fc3fff67ec3c9cf2696f7b1fcc068637d8823df21aa4e"
+    },
+    {
+      "month": "2012-07",
+      "file": "data/2012-07.json",
+      "count": 272,
+      "text_count": 272,
+      "sha256": "d928a47446978aacbece6ffe32d67f9d9aca7a6afdcd41b2eb107d8409e6c2de"
+    },
+    {
+      "month": "2012-06",
+      "file": "data/2012-06.json",
+      "count": 227,
+      "text_count": 227,
+      "sha256": "4a8ee032d2ac3eee0103a099ed9a5cbe55838c9e13b8e6061e30e1d3e8399f62"
+    },
+    {
+      "month": "2012-05",
+      "file": "data/2012-05.json",
+      "count": 275,
+      "text_count": 275,
+      "sha256": "38dfdd89f5e25efa7d0b4f058b5a5b425121a7bd0bd5baf93e320b4d85a786b6"
+    },
+    {
+      "month": "2012-04",
+      "file": "data/2012-04.json",
+      "count": 203,
+      "text_count": 203,
+      "sha256": "5e31796a4f05a983aa893c3e3168d2f112fc24a7cfe679f4f0ba20cce2fe4d27"
+    },
+    {
+      "month": "2012-03",
+      "file": "data/2012-03.json",
+      "count": 206,
+      "text_count": 206,
+      "sha256": "5ca84a072518762bfaedd504ee03e3fefc51ac2c3fdb3cbc1ee5face50596354"
+    },
+    {
+      "month": "2012-02",
+      "file": "data/2012-02.json",
+      "count": 257,
+      "text_count": 257,
+      "sha256": "b90db19bae0cb89edf0a9ac39e18189f7668528f63670e6001088a7d483b54c6"
+    },
+    {
+      "month": "2012-01",
+      "file": "data/2012-01.json",
+      "count": 182,
+      "text_count": 182,
+      "sha256": "9394502bb15b7fea46eb0ff6bbd0d99e94901287dfc99916a2414fdc9bc53b03"
+    },
+    {
+      "month": "2011-12",
+      "file": "data/2011-12.json",
+      "count": 223,
+      "text_count": 223,
+      "sha256": "af90f974aa9b591b39e005dc2604497443ed988fa217b5b6a783a163fbb4d554"
+    },
+    {
+      "month": "2011-11",
+      "file": "data/2011-11.json",
+      "count": 124,
+      "text_count": 124,
+      "sha256": "db5fb6eba0a3f546c072cbacecd831f5ed03491e06c40838f0af6d6aac367394"
+    },
+    {
+      "month": "2011-10",
+      "file": "data/2011-10.json",
+      "count": 113,
+      "text_count": 113,
+      "sha256": "29a84b0acdada40ce099bed1327ba693d6522750ce5f8a38439e42bc3f436b78"
+    },
+    {
+      "month": "2011-09",
+      "file": "data/2011-09.json",
+      "count": 111,
+      "text_count": 111,
+      "sha256": "9ae63cae897229bd2b67b23453c2661c39dafeca13db449c5cf43eac22039f0e"
+    },
+    {
+      "month": "2011-08",
+      "file": "data/2011-08.json",
+      "count": 100,
+      "text_count": 100,
+      "sha256": "d79a075152cb5caae51358424d64754949a9f09aa1668d01f4c6ababeb9bcb13"
+    },
+    {
+      "month": "2011-07",
+      "file": "data/2011-07.json",
+      "count": 76,
+      "text_count": 76,
+      "sha256": "b7e3b7861441e4591911b5a3842c700792b1a43ab4ef970b63ef423120f56f05"
+    },
+    {
+      "month": "2011-06",
+      "file": "data/2011-06.json",
+      "count": 16,
+      "text_count": 16,
+      "sha256": "6a118471e737f5874412a093d50c279d1ff79441cb1821bd81a0c7f5e71e9f2e"
+    },
+    {
+      "month": "2011-05",
+      "file": "data/2011-05.json",
+      "count": 19,
+      "text_count": 19,
+      "sha256": "a33ca97bcb46e55bc209b98cc1f01d14a3215489913208db0bc5fc5283cb72ba"
+    },
+    {
+      "month": "2011-04",
+      "file": "data/2011-04.json",
+      "count": 27,
+      "text_count": 27,
+      "sha256": "e1d58aa8eb2766d1478e1e41be122d52db4efcf648447aa6b83b19668e3cf8fe"
+    },
+    {
+      "month": "2011-03",
+      "file": "data/2011-03.json",
+      "count": 36,
+      "text_count": 36,
+      "sha256": "f144eec68beda9c8e7514a3e759d68ae509f5a02e7736ba6200bbeed804b0e21"
+    },
+    {
+      "month": "2011-02",
+      "file": "data/2011-02.json",
+      "count": 17,
+      "text_count": 17,
+      "sha256": "b8be2a89178dcbf1e721407e2b6c6fbb830069735c972d93173cc41bf6215a5e"
+    },
+    {
+      "month": "2011-01",
+      "file": "data/2011-01.json",
+      "count": 9,
+      "text_count": 9,
+      "sha256": "2e763ee264f0be9de2f25611be4219d3d2a1256cb4a2112f23956e24103b49ca"
+    },
+    {
+      "month": "2010-12",
+      "file": "data/2010-12.json",
+      "count": 10,
+      "text_count": 10,
+      "sha256": "5a931ad52b7a6599c343c74c7e05ff6c6585585eaee65c4b9a38fa75536fb1be"
+    },
+    {
+      "month": "2010-11",
+      "file": "data/2010-11.json",
+      "count": 11,
+      "text_count": 11,
+      "sha256": "78cdce8599445e4feeebec9171c55b2a1347412e21ba425061d3a2222adfc2d8"
+    },
+    {
+      "month": "2010-10",
+      "file": "data/2010-10.json",
+      "count": 9,
+      "text_count": 9,
+      "sha256": "43b6d2c0f9c57f7de176cd013aeed5e7ebdcfafc493e03b0d01424bab22d2ce0"
+    },
+    {
+      "month": "2010-09",
+      "file": "data/2010-09.json",
+      "count": 13,
+      "text_count": 13,
+      "sha256": "a852da8a56ae87c660b3988cef4a1e5eaaf80226f6b51c61dbaa1bfaf95be11d"
+    },
+    {
+      "month": "2010-08",
+      "file": "data/2010-08.json",
+      "count": 17,
+      "text_count": 17,
+      "sha256": "ec0b0f22e2ab7065f234eca904161e03a7e44af2069e49323680547f8b5a8c39"
+    },
+    {
+      "month": "2010-07",
+      "file": "data/2010-07.json",
+      "count": 16,
+      "text_count": 16,
+      "sha256": "c99a9794f3114a653ab3f1991e194fe63df6625eb4035ca373152b0baf94a6b0"
+    },
+    {
+      "month": "2010-06",
+      "file": "data/2010-06.json",
+      "count": 19,
+      "text_count": 19,
+      "sha256": "3bad96ba924304badddfb5a57d5983c854856d7045953aad72b1b8e551f08371"
+    },
+    {
+      "month": "2010-05",
+      "file": "data/2010-05.json",
+      "count": 22,
+      "text_count": 22,
+      "sha256": "cd6beda3c6360c01f5681554a202cf578db75805d2f38388eecf51a5220b799f"
+    },
+    {
+      "month": "2010-04",
+      "file": "data/2010-04.json",
+      "count": 18,
+      "text_count": 18,
+      "sha256": "a04bd497afa93262537eb072fed36e41ce815294d0f53ef49ef2d17d44e432f1"
+    },
+    {
+      "month": "2010-03",
+      "file": "data/2010-03.json",
+      "count": 10,
+      "text_count": 10,
+      "sha256": "e76d19ad839f659b52beaffd4fe7a7cb2021f9b62295a02ace5d822f70678871"
+    },
+    {
+      "month": "2010-02",
+      "file": "data/2010-02.json",
+      "count": 4,
+      "text_count": 4,
+      "sha256": "76e7b65aafb011982cbef276e1662d62a341e7d776ad557550c55b5f3ffce1d2"
+    },
+    {
+      "month": "2010-01",
+      "file": "data/2010-01.json",
+      "count": 4,
+      "text_count": 4,
+      "sha256": "6a9f8f6991177f05a55a2bbe0a75477d2b6e0523dcdca2f9ff70d993189b153c"
+    },
+    {
+      "month": "2009-12",
+      "file": "data/2009-12.json",
+      "count": 2,
+      "text_count": 2,
+      "sha256": "f6bf84c921f07f68c1c373decd764b4c8e4dec556434fcc5c0ee5a45ea4399dc"
+    },
+    {
+      "month": "2009-11",
+      "file": "data/2009-11.json",
+      "count": 3,
+      "text_count": 3,
+      "sha256": "a4ca5bf3f0137b4387e3a088554ec54729f9646dda8d810e2ab8eba8543cb589"
+    },
+    {
+      "month": "2009-10",
+      "file": "data/2009-10.json",
+      "count": 4,
+      "text_count": 4,
+      "sha256": "d710c9fa7b47dd029d4ae49457ad6ff0b2c5a08c561740d4afda1ca8ae8e54b2"
+    },
+    {
+      "month": "2009-09",
+      "file": "data/2009-09.json",
+      "count": 3,
+      "text_count": 3,
+      "sha256": "8ae90948c695424445d07159348cdea8bb71d7ecd29e8dea2e51403ec1f23a3d"
+    },
+    {
+      "month": "2009-08",
+      "file": "data/2009-08.json",
+      "count": 7,
+      "text_count": 7,
+      "sha256": "745f4f7db6c2f1258a27778e437fe7c132ce5cf7d7d3e776baf36cb7dd9df538"
+    },
+    {
+      "month": "2009-07",
+      "file": "data/2009-07.json",
+      "count": 5,
+      "text_count": 5,
+      "sha256": "b4482d9cd5f0e51399ed9f408bae33ec073d245d2f5bf6554cb8cfb697561b57"
+    },
+    {
+      "month": "2009-06",
+      "file": "data/2009-06.json",
+      "count": 11,
+      "text_count": 11,
+      "sha256": "a1bd73b0c4108b29364160e5da8d9b712d395984f35aa97ffa2a076920922efa"
+    },
+    {
+      "month": "2009-05",
+      "file": "data/2009-05.json",
+      "count": 21,
+      "text_count": 21,
+      "sha256": "22f4ec627da6d90593145853965979f8501954e0a54dab156d597a8e88739f75"
+    }
+  ],
+  "kind_counts": {
+    "unknown": 6741,
+    "original": 73058,
+    "quote": 1480,
+    "repost": 15805
+  },
+  "source_counts": {
+    "3dl-kaggle-v1": 90343,
+    "stiles": 29469,
+    "truth-fork": 27570,
+    "cnn-metadata": 37346
+  },
+  "sources": [
+    {
+      "id": "3dl-kaggle-v1",
+      "url": "https://www.kaggle.com/datasets/datadrivendecision/trump-tweets-2009-2025",
+      "download_url": "https://www.kaggle.com/api/v1/datasets/download/datadrivendecision/trump-tweets-2009-2025?datasetVersionNumber=1",
+      "creator": "Data Driven Decision Lab (3DL)",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "files": [
+        {
+          "file": "kaggle-djt_posts_dec2025.csv",
+          "original_name": "djt_posts_dec2025.csv",
+          "bytes": 31730473,
+          "sha256": "3e872b2d05e06f7253a4def413bda4522fcfaa940e9f7f38eb7ddccd79aa9e85"
+        }
+      ],
+      "sha256": "bf56b81e10eed132a618685bda4a60cb597fbc134ed484a7346262e494e02e94"
+    },
+    {
+      "id": "stiles",
+      "url": "https://github.com/stiles/trump-truth-social-archive",
+      "download_url": "https://raw.githubusercontent.com/stiles/trump-truth-social-archive/40a883423715efc76c2f7f157cd9485e73708168/data/truth_archive.json",
+      "commit": "40a883423715efc76c2f7f157cd9485e73708168",
+      "creator": "stiles",
+      "license": "CC0-1.0",
+      "license_url": "https://raw.githubusercontent.com/stiles/trump-truth-social-archive/40a883423715efc76c2f7f157cd9485e73708168/LICENSE",
+      "files": [
+        {
+          "file": "stiles-truth.json",
+          "bytes": 15568111,
+          "sha256": "97a45b0f6756729279a189e0eb606368b0e9c0beb20a5a52868241cf4f6555e3"
+        }
+      ],
+      "rows": 29469,
+      "earliest": "2022-02-14T15:54:32.528Z",
+      "latest": "2026-05-02T23:12:54.339Z",
+      "row_keys": [
+        "id",
+        "created_at",
+        "content",
+        "url",
+        "media",
+        "replies_count",
+        "reblogs_count",
+        "favourites_count"
+      ]
+    },
+    {
+      "id": "truth-fork",
+      "url": "https://github.com/a850762312/trump-truth-social-archive",
+      "download_url": "https://raw.githubusercontent.com/a850762312/trump-truth-social-archive/caefee6dd93c69fc6b41db64b09a636be2342f0f/data/truth_archive.json",
+      "commit": "caefee6dd93c69fc6b41db64b09a636be2342f0f",
+      "creator": "a850762312",
+      "license": "CC0-1.0",
+      "license_url": "https://raw.githubusercontent.com/a850762312/trump-truth-social-archive/caefee6dd93c69fc6b41db64b09a636be2342f0f/LICENSE",
+      "files": [
+        {
+          "file": "truth-fork-truth.json",
+          "bytes": 14393432,
+          "sha256": "567236304c84d1c3fc4d79dc6627cc6b5210c13022a5db36c9199d07797190ee"
+        }
+      ],
+      "rows": 27570,
+      "earliest": "2022-02-14T15:54:32.528Z",
+      "latest": "2025-07-05T20:13:55.771Z",
+      "row_keys": [
+        "id",
+        "created_at",
+        "content",
+        "url",
+        "media",
+        "replies_count",
+        "reblogs_count",
+        "favourites_count"
+      ]
+    },
+    {
+      "id": "cnn-metadata",
+      "url": "https://ix.cnn.io/data/truth-social/truth_archive.json",
+      "creator": "CNN / Matt Stiles archive continuation",
+      "license": "Factual metadata only; no post text or media redistributed",
+      "fields": [
+        "id",
+        "created_at",
+        "url",
+        "has_text",
+        "media_count"
+      ]
+    }
+  ],
+  "limitations": [
+    "Not a complete archive of every SNS account, deleted post, media, or revision.",
+    "Facebook and Instagram have not been collected.",
+    "X coverage ends at the last source timestamp, not today.",
+    "Recent Truth Social items without a cleared text source contain timestamps/permalinks only.",
+    "Repost/quote/original labels and deletion flags are source-provided; unknown values remain unknown.",
+    "Images, videos, third-party transcripts and thumbnails are not redistributed."
+  ],
+  "transformations": [
+    "IDs kept as decimal strings; deduplicated by platform and post ID.",
+    "Timezone-aware source timestamps normalized to UTC; raw source snapshots and hashes retained.",
+    "Source times differing from the encoded post creation timestamp by more than two seconds are corrected and explicitly marked; original source time retained.",
+    "HTML converted to plain text; longest available text variant retained and differences logged.",
+    "CNN feed used for factual metadata only."
+  ]
+}

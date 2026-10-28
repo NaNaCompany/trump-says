@@ -1,0 +1,11 @@
+{
+  "slug": "trump-says",
+  "origin": "https://nanalab.kr/trump-says",
+  "audience": "public",
+  "languages": [
+    "en"
+  ],
+  "coverage": "partial",
+  "name": "Trump Says",
+  "repository": "https://github.com/NaNaCompany/trump-says"
+}
