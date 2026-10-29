@@ -24,7 +24,7 @@ for(const file of ['feed.js','feed.css'])await fs.copyFile(path.join(src,file),p
 const feedConfig='<script type="application/json" id="feed-config">'+JSON.stringify({base:'/trump-says/',origin:app.origin,name:'Trump Says',autoEmbeds:true,allowText:false,xHandles:['realDonaldTrump'],displayTimezone:'America/New_York',archiveMenuUrl:'/trump-says/archive-menu.html'}).replaceAll('<','\\u003c')+'</script>';
 for(const file of ['search.html','sources.html']){
  const target=path.join(dist,file);let value=await fs.readFile(target,'utf8');
- value=value.replace('</head>','<link rel="stylesheet" href="feed.css?v=20261029"><script src="feed.js?v=20261029" defer></script></head>');
+ value=value.replace('</head>','<link rel="stylesheet" href="feed.css?v=20261029-nav2"><script src="feed.js?v=20261029" defer></script></head>');
  value=value.replace('<body>','<body>'+feedConfig+archiveMenu(new Map()));
  await fs.writeFile(target,value);
 }
