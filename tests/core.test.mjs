@@ -26,5 +26,5 @@ test('source links cannot execute scripts or point to an unrelated account',()=>
   assert.equal(safeOriginal('https://truthsocial.com/@realDonaldTrump/posts/123','truth'),'https://truthsocial.com/@realDonaldTrump/posts/123');
   assert.equal(safeOriginal('https://truthsocial.com/@realDonaldTrump/123','truth'),'https://truthsocial.com/@realDonaldTrump/123');
   assert.equal(safeOriginal('https://truthsocial.com/@another/posts/123','truth'),null);
-  for(const url of ['javascript:alert(1)','https://example.com/realDonaldTrump/123','https://x.com/another/status/123'])assert.equal(safeOriginal(url,'x'),null);
+  for(const url of ['javascript:alert(1)','https://example.com/realDonaldTrump/123','https://x.com/another/status/123','https://name:password@x.com/realDonaldTrump/status/123','https://x.com:8443/realDonaldTrump/status/123','http://x.com/realDonaldTrump/status/123'])assert.equal(safeOriginal(url,'x'),null);
 });

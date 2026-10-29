@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "immutable_source_records": 97084,
+  "overlay_records": 85,
+  "checked_detail_records": 85,
+  "source_strings_with_encoded_line_end_whitespace": 1,
+  "decoded_body_exact_source_string": true,
+  "decoded_utf8_sha256_matches_source": true,
+  "no_source_trimming": true,
+  "empty_media_sources_not_invented": true
+}

@@ -1,32 +1,57 @@
 # Trump Says
 
-Independent timestamped social-record archive. See Sources & coverage in the app and src/data/manifest.json for exact counts, source licenses and gaps. Not complete across all SNS.
+English interface for a dated social-post archive. Original post language only; no translations.
 
-Build: node scripts/build.mjs
-Tests: node --test tests/*.test.mjs
-Import: python scripts/import_archive.py (uses existing workspace source snapshots; --refresh-metadata explicitly refreshes factual current-feed metadata). No recurring job configured.
+Launch: https://nanalab.kr/trump-says/
 
-Public GitHub Pages app: https://nanalab.kr/trump-says/ (main:/docs).
+## Text-first display
 
+The main page starts with up to 100 eligible collected posts ranked by known source like-count snapshots, then continues newest first without popular-post duplicates. Unknown like counts remain unknown; this is not a live or complete-account ranking.
 
-## English interface and portrait
+Home, continuation feeds, month lists, day lists and shuffled month cards show text first. These lists do not initialize X, Meta or Truth Social embeds. A text-preview anchor opens the existing individual static detail page. Normal pagination and detail links remain usable without JavaScript.
 
-The interface, runtime states and coverage page are English. The official portrait by Daniel Torok / The White House is a public-domain U.S. federal government work. The original JPEG is unchanged; CSS scales/crops the display. `src/assets/portrait-credit.json` retains the source, license record and SHA-256.
+A preview contains at most 800 Unicode characters in total. When the captured source string exceeds that limit, the preview is its first 799 Unicode characters followed by one ellipsis character (…). The source string itself is not truncated or overwritten. Shorter strings remain intact.
 
+An individual detail page displays the complete available captured source string together with the official platform embed and an original-source link. The saved string can be partial if the source capture was partial; displaying it in full does not claim recovery of the entire original post. Provider metadata descriptions remain labeled as source-page descriptions and are not presented as verified full post bodies. Empty source bodies and unavailable text receive explicit source-availability labels; no text is inferred, completed, translated or generated to fill a gap.
 
-## Publisher integrations
+## Source data and coverage
 
-Every generated HTML page includes GA4, Google Tag Manager (with noscript fallback), AdSense and Cloudflare Web Analytics using the verified existing NaNa publisher IDs. The build injects these integrations. Analytics and ad scripts load only on the approved production hostnames, not local preview hosts. User input values and uploaded file contents are not passed to analytics events. GA page locations omit query strings and hashes.
+This is a partial source snapshot, not a complete account export, live feed, recent-activity ranking or claim of personal authorship. See src/data/manifest.json and Sources & coverage for the exact records, source dates and limitations.
 
+The original monthly src/data/*.json chunks remain the primary source records. A separate src/data/text-overrides.json overlay supplies source-backed text for eligible metadata-only records; it does not rewrite the original chunks. Existing source text is retained as captured.
 
-## Home feed update — 2026-10-29
+The new public text overlay follows the user's original-language display request. Source attribution, status, provenance, normalization/completeness notes and rights declarations remain visible. A dataset or repository license is not represented as a blanket license for all underlying third-party posts. Unlicensed images, post media and third-party translations are not added by this text display change. The separate local TXT archive remains local; the public overlay explicitly contains the source strings selected for this release.
 
-The home page keeps the credited official portrait and statically renders up to 100 posts ranked by known source like counts. The following latest feed is newest first, excludes those popular identities, and loads complete local HTML continuation pages in 20-record batches. Native reposts are excluded from the new home/feed and displayed month/day lists; uncertain source classifications remain marked unknown. Existing static detail URLs and the original source chunks remain available unchanged.
+Native reposts are excluded from the home and rendered list feeds. Original identities and existing detail routes are preserved. For the political-account collection, retained records require matching author markers; replies and quotes with the account's own added content are eligible. Historical source classifications and unknown values are not silently rewritten. Staff may operate an account.
 
-Source counts are historical snapshots, not live likes. `python scripts/import_likes.py` derives factual counts from the existing pinned raw files. `src/data/likes.json` preserves the source selection policy, capture-time boundary and source hashes. Missing values remain null; they are not replaced by zero. No full corpus request is made by the homepage.
+## Navigation and runtime
 
-The right-side Archive control opens year/month navigation. Home has an inline menu; other pages fetch one shared `archive-menu.html` only when opened, avoiding hundreds of repeated month links in every detail page. Dates retain US Eastern time with IANA daylight-saving rules.
+The floating Archive control opens year/month navigation. Month pages retain random samples of up to 50 distinct eligible collected posts and day navigation; each day lists the collected eligible records for that date. The archive menu is loaded on demand outside the home. Source dates use America/New_York, with IANA daylight-saving rules.
 
-The new feed records do not republish uncleared post bodies. Official X and Truth Social embeds load automatically near the viewport with a bounded queue, and the original permalink remains available. Existing detail/search text is not rewritten by this update. The owner's separate local text archive is not copied into this repository by the feed builder.
+Continuation pages are ordinary static HTML, loaded sequentially on scroll with a normal Load more link as fallback. Text previews and detail URLs use the same stable record identities. Individual detail pages keep the original-source link, day and Search links, previous/next navigation, and Retry controls for the official embed. The original-source link remains available if the embed cannot display. Deletion, privacy, regional limits and platform sign-in rules may affect the live embed independently of the stored snapshot.
 
-Verification: `node --test tests/core.test.mjs tests/publisher.test.mjs tests/feed-model.test.mjs tests/feed-runtime.test.mjs`; `python scripts/check_feed.py`. Shared feed runtime regression tests are included and run against src/feed.js. Every generated continuation page retains canonical, GA4, GTM with noscript, AdSense, Cloudflare and More Apps. The feed-only text policy does not change the source rights declarations recorded in Sources & coverage.
+## Portraits, publisher integrations and independence
+
+The Daniel Torok / White House official portrait retains its original bytes and the public-domain source/creator/license/hash record in src/assets/portrait-credit.json.
+
+Every generated HTML page retains the verified GA4, GTM with noscript fallback, Google AdSense and Cloudflare Web Analytics integrations, a self-referencing canonical URL and the More Apps footer link. Publisher requests and platform embeds do not initialize on local/test hosts. Search values, copied text and other user input are not sent as custom analytics events; analytics page locations omit query strings and fragments.
+
+Independent archive; no affiliation or endorsement by an account holder, government, company or social platform is implied. Original platform embed documentation: https://help.x.com/en/using-x/how-to-embed-a-post.
+
+## Build and verification
+
+```text
+node scripts/build.mjs
+python scripts/check_feed.py
+node --test tests/*.test.mjs
+```
+
+The build writes docs/. GitHub Pages serves main:/docs. Source documentation is not proof of completed testing, a pushed commit, Pages deployment, public HTTP/browser verification or search-engine indexing. Release validation and publication evidence for this text-first change are recorded separately under .tools/says-text-first-20261029/ in the workspace; per-app evidence remains under evidence/.
+
+## Sitemap
+
+Existing public page paths and canonical identities are preserved. Each sitemap leaf remains within 50,000 URLs and 50 MB. Parent sitemap indexes must reference leaf maps directly rather than nesting this app's sitemap.xml index.
+
+- https://nanalab.kr/trump-says/sitemap-main.xml
+- https://nanalab.kr/trump-says/sitemap-posts-01.xml
+- https://nanalab.kr/trump-says/sitemap-posts-02.xml

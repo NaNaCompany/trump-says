@@ -1,4 +1,4 @@
-import {timeParts,safeOriginal,KIND} from './core.js?v=public-posts-20261028';
+import {timeParts,safeOriginal,KIND} from './core.js?v=20261029-text-first';
 const $=id=>document.getElementById(id);
 const number=new Intl.NumberFormat('en-US');
 let manifest=null,worker=null,page=1,lastToken=0,currentRows=[],ready=false,searchStarted=false,recentRows=[];
@@ -19,13 +19,16 @@ function render(rows){
     if(row.source_deleted_flag===true)meta.append(element('span','deleted','Marked deleted in source'));
     if(row.timestamp_basis)meta.append(element('span','corrected','Time corrected'));
     main.append(meta);
-    if(row.text){
-      const text=element('p','post-text collapsed',row.text.slice(0,420)+(row.text.length>420?'…':'')),toggle=element('a','expand','Read post →');toggle.href='posts/'+row.id.replace(':','-')+'.html';
-      main.append(text,toggle);
-    }else{
-      const label=row.content_status==='media_only'?'Media post with no archived text.':'Text unavailable. The posting time and original link are archived.';
-      main.append(element('p','unavailable',label));
-    }
+    const textLink=element('a','feed-text-link');textLink.href='posts/'+row.id.replace(':','-')+'.html';
+    const points=typeof row.text==='string'?Array.from(row.text):[],truncated=points.length>800||row.text_truncated===true;
+    const label=row.content_status==='media_only'?'Media post. Text was not available in the collected source.':'Text was not available in the collected source.';
+    textLink.append(element('p',row.text?'feed-text':'feed-text feed-text-unavailable',points.length>800?points.slice(0,799).join('')+'…':row.text||label));
+    if(truncated)textLink.append(element('span','feed-read-more','Read full post →'));
+    main.append(textLink);
+    const textStatus=row.text_override_status||row.text_status||(row.text?'available':'unavailable');
+    let textNote=!row.text?'Source text unavailable.':textStatus.includes('description')?'Official original-page description; not a full post transcript.':textStatus.includes('partial')||textStatus.includes('truncated')?'Partial source text; the original may contain more.':'Captured source text.';
+    if(row.text&&truncated)textNote+=' Preview shortened to 800 characters. Open the post for the complete captured text.';
+    const sourceNote=element('p','feed-text-note',textNote);sourceNote.dataset.textStatus=textStatus;main.append(sourceNote);
     const actions=element('div','actions');if(!row.text){const detail=element('a','original','View record →');detail.href='posts/'+row.id.replace(':','-')+'.html';actions.append(detail);}const url=safeOriginal(row.original_url,row.platform);
     if(url){const a=element('a','original','Original post ↗');a.href=url;a.target='_blank';a.rel='noopener noreferrer';actions.append(a);}
     const share=element('button','share','Copy post link');share.type='button';
@@ -61,9 +64,9 @@ try{
   $('total').textContent=number.format(manifest.total_records);$('textCount').textContent=number.format(manifest.text_records);$('metadataCount').textContent=number.format(manifest.metadata_only);
   $('asof').textContent=`Snapshot ${manifest.captured_at.slice(0,10)} UTC · Partial coverage`;
   $('coverageText').textContent=`X / Twitter: ${number.format(manifest.platforms.x.count)} posts · Truth Social: ${number.format(manifest.platforms.truth.count)} posts. Facebook and Instagram not collected. Latest Truth Social text: ${manifest.platforms.truth.last_text.slice(0,10)}; latest metadata: ${manifest.platforms.truth.last.slice(0,10)} (UTC).`;
-  const recent=await(await fetch('./data/recent.json')).json();recentRows=recent;
+  const recent=await(await fetch('./data/recent.json?v=20261029-text-first')).json();recentRows=recent;
   if(!post){render(recent);$('resultCount').textContent='Latest '+recent.length+' posts with archived text';$('indexStatus').textContent='Full archive loads when you search';$('next').disabled=false;}
-  worker=new Worker(new URL('./worker.js?v=public-posts-20261028',import.meta.url),{type:'module'});
+  worker=new Worker(new URL('./worker.js?v=20261029-text-first',import.meta.url),{type:'module'});
   worker.onmessage=({data})=>{
     if(data.type==='progress'){$('indexStatus').textContent=`Search index ${data.done} / ${data.total}`;return;}
     if(data.type==='ready'){ready=true;$('indexStatus').textContent=`${number.format(manifest.total_records)} posts indexed`;return;}

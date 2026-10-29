@@ -1,11 +1,21 @@
 {
   "status": "passed",
-  "tests": 31,
+  "tests": 51,
   "core_tests": 4,
   "publisher_tests": 3,
-  "feed_model_tests": 6,
-  "shared_feed_runtime_tests": 18,
-  "shared_runtime_sha256": "8b855433cf176de154e1085bec3d425f8d832c99a2314f01fdbb84c1c06f02ff",
-  "shared_css_sha256": "a71a4d7d2eb4ff30178952d3c49782905f6233a5f76b2d06e676470f8ee43525",
-  "rtk_boundary": "RTK invoked earlier; Windows security subsequently blocked it. No unblocking or bypass attempted; final checks used ordinary Node and Python as instructed by parent."
+  "feed_model_tests": 9,
+  "shared_feed_runtime_tests": 25,
+  "post_detail_tests": 5,
+  "search_worker_tests": 2,
+  "shared_runtime_sha256": "898b26d4bbbb915dc12f57703f217749157954a1c2f4bf745a46bbe26e089a50",
+  "shared_css_sha256": "bc2b8e4492ee482c5679f9d367d04e8fed95da56bfa09844676c7744acb71392",
+  "detail_runtime_sha256": "35260ed08d0fd0f3311d4d7b9dab9700c449047f6f90db2cc1323e524411f969",
+  "source_overlay_sha256": "7785fee231f14b537aec4732ba4f1bd17ea2d693802d903b8c9fe6f8318cffcc",
+  "list_platform_embed_requests": false,
+  "detail_local_test_requests": false,
+  "rtk_boundary": "RTK execution prohibited by parent after Windows security block. Final checks used ordinary Node, Git and bundled Python; no unblock or bypass attempted.",
+  "generated_search_boundary_tests": 1,
+  "search_worker_sha256": "0a5674bbf813af5e291460377ba164a5c86e8bc8a26c56233e7c6f60a2e97e5a",
+  "text_overlay_merge_sha256": "7d3b0232f670da313939b1867c35c46a60a06d7dd54aa52ec9828f21ebfa612b",
+  "producer_runtime_tests": 2
 }

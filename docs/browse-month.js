@@ -6,4 +6,4 @@ function sample(){
  const cards=copy.slice(0,50).map(row=>window.SaysFeed.createCard(row));list.replaceChildren(...cards);window.SaysFeed.hydrate(list);
  status.textContent=Math.min(50,rows.length)+' random posts from '+rows.length.toLocaleString('en-US')+'. Choose a day above to see every post from that day.';
 }
-try{const response=await fetch('./data/'+root.dataset.month+'.json');if(!response.ok)throw new Error('Could not load this month.');rows=await response.json();sample();button.addEventListener('click',sample);}catch{status.textContent+=' Could not refresh the sample; showing the saved selection.';button.disabled=true;}
+try{const response=await fetch('./data/'+root.dataset.month+'.json?v=20261029-text-first');if(!response.ok)throw new Error('Could not load this month.');rows=await response.json();sample();button.addEventListener('click',sample);}catch{status.textContent+=' Could not refresh the sample; showing the saved selection.';button.disabled=true;}

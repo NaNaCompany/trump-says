@@ -28,6 +28,6 @@ export function searchRecords(rows,filter) {
   return results;
 }
 export function safeOriginal(url,platform) {
-  try{const u=new URL(url);const host=platform==='x'?['x.com','twitter.com'].includes(u.hostname):platform==='truth'&&u.hostname==='truthsocial.com';const account=platform==='x'?/^\/realdonaldtrump\/status\/[0-9]+\/?$/i:/^\/@realdonaldtrump\/(?:posts\/)?[0-9]+\/?$/i;return u.protocol==='https:'&&host&&account.test(u.pathname)?u.href:null;}catch{return null;}
+  try{const u=new URL(url);const host=platform==='x'?['x.com','twitter.com'].includes(u.hostname):platform==='truth'&&u.hostname==='truthsocial.com';const account=platform==='x'?/^\/realdonaldtrump\/status\/[0-9]+\/?$/i:/^\/@realdonaldtrump\/(?:posts\/)?[0-9]+\/?$/i;return u.protocol==='https:'&&!u.username&&!u.password&&!u.port&&host&&account.test(u.pathname)?u.href:null;}catch{return null;}
 }
 export const KIND={original:'Original',repost:'Repost',quote:'Quote',unknown:'Unknown type'};

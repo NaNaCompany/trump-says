@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "actual_generated_month_records_checked": 81279,
+  "month_json_files": 197,
+  "available_preview_records": 74662,
+  "missing_preview_records": 6617,
+  "provider_source_objects": 74585,
+  "captured_source_urls": 85,
+  "shared_url_guards_unchanged": true,
+  "producer_records_survive_actual_browser_validator": true,
+  "platform_requests": 0
+}

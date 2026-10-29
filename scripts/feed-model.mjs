@@ -1,6 +1,8 @@
 import {timeParts,safeOriginal} from '../src/core.js';
+import {textPreview} from '../src/text-source.js';
+export {withTextOverride,textPreview} from '../src/text-source.js';
 
-export const esc=value=>String(value??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
+export const esc=value=>String(value??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replace(/[ \t]+(?=\r?\n)/g,space=>Array.from(space,c=>c===' '?'&#32;':'&#9;').join(''));
 export const postUri=row=>row.id.replace(':','-')+'.html';
 
 export function eligibleFeedRows(rows){
@@ -11,6 +13,9 @@ export function eligibleFeedRows(rows){
 export function mergeLikes(row,likes,app){
  const info=likes.counts[row.id];
  const source=info?likes.sources[info.source_id]:null;
+ const preview=textPreview(row.text);
+ const rawTextSource=row.text_override_source||row.text_source||null;
+ const textSource=typeof rawTextSource==='string'&&/^[a-z0-9][a-z0-9_.-]*$/i.test(rawTextSource)?{provider:rawTextSource}:rawTextSource;
  return {
   id:row.id,post_id:row.post_id,platform:row.platform,
   original_url:safeOriginal(row.original_url,row.platform),
@@ -18,8 +23,13 @@ export function mergeLikes(row,likes,app){
   permalink:app.origin+'/posts/'+postUri(row),
   like_count:info?.count??null,
   likes_captured_at:info?likes.captured_at:null,
-  likes_source:source?{provider:source.id,url:source.url,count_precision:'exact',capture_time_basis:likes.capture_time_basis}:null,
-  post_kind:row.kind||'unknown',text:null,
+  likes_source:source?{provider:source.id,count_precision:'exact'}:null,
+  post_kind:row.kind||'unknown',...preview,
+  source_ids:row.source_ids||[],text_source:textSource,
+  content_status:row.content_status||null,
+  text_status:row.text_override_status||(preview.text?'available':row.content_status||'unavailable'),
+  ...(row.text_override_source?{text_capture_source:row.text_override_source}:{}),
+  ...(row.text_override_sha256?{text_capture_sha256:row.text_override_sha256}:{}),
  };
 }
 
@@ -34,7 +44,11 @@ export function makeFeedCard(row){
  const clock=timeParts(row.published_at,'America/New_York');
  const serialized=JSON.stringify(row).replaceAll('<','\\u003c');
  const likes=row.like_count===null?'Likes unavailable':row.like_count.toLocaleString('en-US')+' likes';
- return `<li class="feed-record archive-record" data-feed-id="${esc(row.id)}"><div class="feed-meta"><time datetime="${esc(row.published_at)}">${clock.date} · ${clock.time} ${clock.offset}</time><span class="feed-likes">${esc(likes)}</span></div><div class="feed-embed" data-feed-embed><p class="feed-loading">Original post loads as this record enters view.</p></div><div class="feed-actions"><a href="${esc(row.permalink)}">View post</a><a href="${esc(row.original_url)}" target="_blank" rel="noopener noreferrer">Original ↗</a><button type="button" data-feed-action="embed">Load original post</button></div><script type="application/json" class="feed-record-data">${serialized}</script></li>`;
+ const body=row.text||((row.text_status==='media_only'||row.content_status==='media_only')?'Media post. Text was not available in the collected source.':'Text was not available in the collected source.');
+ const status=row.text_status||'unavailable';
+ let note=!row.text?'Source text unavailable.':status.includes('description')?'Official original-page description; not a full post transcript.':status.includes('partial')||status.includes('truncated')?'Partial source text; the original may contain more.':'Captured source text.';
+ if(row.text&&row.text_truncated)note+=' Preview shortened to 800 characters. Open the post for the complete captured text.';
+ return `<li class="feed-record archive-record" data-feed-id="${esc(row.id)}"><div class="feed-meta"><time datetime="${esc(row.published_at)}">${clock.date} · ${clock.time} ${clock.offset}</time><span class="feed-likes">${esc(likes)}</span></div><a class="feed-text-link" href="${esc(row.permalink)}"><p class="feed-text${row.text?'':' feed-text-unavailable'}" dir="auto">${esc(body)}</p><span class="feed-read-more">View post →</span></a><p class="feed-text-note" data-text-status="${esc(status)}">${esc(note)}</p><div class="feed-actions"><a href="${esc(row.permalink)}">View post</a><a href="${esc(row.original_url)}" target="_blank" rel="noopener noreferrer">Original ↗</a></div><script type="application/json" class="feed-record-data">${serialized}</script></li>`;
 }
 
 export function archiveMenu(groups,{inline=false}={}){
@@ -53,10 +67,11 @@ export function archiveMonths(groups){
 }
 
 export function enhanceEmptyDetail(html,row,likes,app){
- if(row.text||row.kind==='repost'||row.kind==='retweet'||!safeOriginal(row.original_url,row.platform)||html.includes('data-feed-id='))return html;
- const normalized=mergeLikes(row,likes,app),serialized=JSON.stringify(normalized).replaceAll('<','\\u003c');
+ if(!safeOriginal(row.original_url,row.platform)||html.includes('id="post-detail-config"'))return html;
+ // The full text is already rendered in the article; it is not duplicated in hidden JSON.
+ const serialized=JSON.stringify({original_url:row.original_url}).replaceAll('<','\\u003c');
  const marker=`<article data-post-id="${esc(row.id)}">`;
  if(!html.includes(marker))throw new Error('Missing detail article');
- html=html.replace(marker,`<article class="feed-record" data-post-id="${esc(row.id)}" data-feed-id="${esc(row.id)}"><script type="application/json" class="feed-record-data">${serialized}</script>`);
- return html.replace(/<p class="unavailable">[^<]*<\/p>/,match=>`<div class="feed-embed" data-feed-embed>${match}</div>`);
+ html=html.replace(marker,marker+`<script type="application/json" id="post-detail-config">${serialized}</script>`);
+ return html.replace('</article>','<section class="post-original"><h2>Original post</h2><div id="post-embed" class="feed-embed" aria-live="polite"></div><button id="load-post-embed" type="button">Load / retry original post</button></section></article>');
 }
