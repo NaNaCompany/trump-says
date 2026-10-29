@@ -3,6 +3,7 @@ import path from 'node:path';
 import {completeTracking} from './publisher-tracking.mjs';
 import {timeParts,safeOriginal,KIND} from '../src/core.js';
 import {eligibleFeedRows,mergeLikes,topLiked,makeFeedCard,archiveMenu,archiveMonths,enhanceEmptyDetail,withTextOverride,textPreview} from './feed-model.mjs';
+import {withHomeSocialMetadata} from './home-social.mjs';
 let archiveWidget='',feedConfig='',detailFeedConfig='';
 const esc=v=>String(v??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replace(/[ \t]+(?=\r?\n)/g,space=>Array.from(space,c=>c===' '?'&#32;':'&#9;').join(''));
 const uri=r=>r.id.replace(':','-')+'.html';
@@ -104,6 +105,6 @@ async function buildHomeFeed(root,dist,app,manifest,groups,popular,latest,naviga
  const topNote=popular.length?`<p>Up to 100 collected posts ranked by available source like counts. Counts are snapshots from different platform sources, not live or directly comparable platform statistics.</p>`:'<p>Like counts are unavailable for this collection.</p>';
  const popularSection=`<section id="popular" class="feed-section"><h2>Most liked posts</h2>${topNote}<ol id="popular-records">${popular.map(makeFeedCard).join('')}</ol></section>`;
  const home=completeTracking(head('Trump Says',app.origin+'/','Donald Trump posts: most liked source records followed by the latest collected posts.','./')+header('./').replace('<div id="archive-panel-body" data-archive-menu></div>','<div id="archive-panel-body" data-archive-menu>'+archiveMonths(groups)+'</div>')+`<main class="home-feed feed-home">${hero}${popularSection}<section id="latest" class="feed-section"><h2>Latest posts</h2><p>Newest first. Posts already shown above are omitted. Native reposts excluded; unknown source classifications remain marked unknown.</p><ol id="latest-records" data-feed-items>${firstLatest.map(makeFeedCard).join('')}</ol>${next(1)}${status}</section>${footer('./')}</main></body></html>`);
- await fs.writeFile(path.join(dist,'index.html'),home);
+ await fs.writeFile(path.join(dist,'index.html'),withHomeSocialMetadata(home,app.origin));
  return {pages,pageSize,popular:popular.length,latest:latest.length};
 }
