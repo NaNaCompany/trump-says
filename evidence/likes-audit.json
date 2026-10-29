@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "records": 97084,
+  "known_like_counts": 90405,
+  "unknown_like_counts": 6679,
+  "source_selected_counts": {
+    "stiles": 29460,
+    "3dl-kaggle-v1": 60945
+  },
+  "unparseable_values": {
+    "stiles": 9,
+    "truth-fork": 9
+  },
+  "source_policy": "First available pinned source: stiles, truth-fork, 3dl-kaggle-v1. Counts are source snapshots and are not current live values.",
+  "capture_time_basis": "Time the source files were collected locally, not the time each like count was measured.",
+  "post_chunks_changed": false,
+  "bodies_copied": false,
+  "translations_created": false
+}

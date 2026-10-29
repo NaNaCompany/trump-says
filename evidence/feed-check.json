@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "source_records": 97084,
+  "existing_source_chunks_unchanged": true,
+  "existing_post_urls_preserved": 97084,
+  "popular_records": 100,
+  "latest_records": 81179,
+  "excluded_native_reposts": 15805,
+  "unknown_kind_retained": 6741,
+  "feed_pages": 4059,
+  "feed_page_size": 20,
+  "feed_latest_unique_descending": true,
+  "home_latest_equals_page_one": true,
+  "popular_latest_disjoint": true,
+  "feed_bodies_republished": false,
+  "likes_known": 90405,
+  "likes_unknown": 6679,
+  "all_new_feed_pages_publisher_checked": true,
+  "lazy_archive_menu": true,
+  "browse_timezone": "America/New_York",
+  "source_bytes_unchanged": true,
+  "docs_files": 106926,
+  "docs_html": 106511,
+  "docs_bytes": 881574247,
+  "sitemap_leaves": [
+    "https://nanalab.kr/trump-says/sitemap-main.xml",
+    "https://nanalab.kr/trump-says/sitemap-posts-01.xml",
+    "https://nanalab.kr/trump-says/sitemap-posts-02.xml"
+  ],
+  "navigation_urls": 9427,
+  "detail_samples_checked": 6
+}

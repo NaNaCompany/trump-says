@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "tests": 31,
+  "core_tests": 4,
+  "publisher_tests": 3,
+  "feed_model_tests": 6,
+  "shared_feed_runtime_tests": 18,
+  "shared_runtime_sha256": "8b855433cf176de154e1085bec3d425f8d832c99a2314f01fdbb84c1c06f02ff",
+  "shared_css_sha256": "a71a4d7d2eb4ff30178952d3c49782905f6233a5f76b2d06e676470f8ee43525",
+  "rtk_boundary": "RTK invoked earlier; Windows security subsequently blocked it. No unblocking or bypass attempted; final checks used ordinary Node and Python as instructed by parent."
+}

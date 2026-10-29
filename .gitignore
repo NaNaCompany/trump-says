@@ -3,3 +3,5 @@ artifacts/
 .local/
 *.log
 __pycache__/
+evidence/feed-*.log
+.cache/

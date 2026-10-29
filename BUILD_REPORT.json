@@ -1,6 +1,6 @@
 {
   "posts": 97084,
-  "archive_pages": 5364,
+  "archive_pages": 9424,
   "months": 197,
   "days": 5167,
   "post_sitemaps": [
@@ -13,10 +13,14 @@
       "urls": 47084
     }
   ],
-  "navigation_urls": 5367,
-  "generated_html_bytes": 442161304,
+  "navigation_urls": 9427,
+  "generated_html_bytes": 630527682,
   "home_data_requests": 0,
-  "home_post_rows": 0,
+  "home_post_rows": 120,
+  "popular_posts": 100,
+  "latest_feed_posts": 81179,
+  "feed_pages": 4059,
+  "excluded_from_feed": 15805,
   "monthly_sample": 50,
   "browse_timezone": "America/New_York",
   "search_recent_records": 50,
