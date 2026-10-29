@@ -34,3 +34,8 @@
 - This record describes the prepared local update. Commit/push/Pages/live-readback status is recorded by the parent release workflow; this note alone does not claim a deployment.
 
 - Final local result: 31 Node tests passed; 4,059 latest HTML pages contain 81,179 records after excluding the 100 popular IDs and 15,805 native reposts. Unknown source kinds remain classified unknown. All 97,084 original detail URLs and source-chunk hashes are preserved. 6,694 metadata-only details now auto-load official embeds. Static feed validation passed; final docs size 881,574,247 bytes across 106,511 HTML files, under the 1,000,000,000-byte release guard.
+
+## 2026-10-29 · Expanded mobile anchor navigation fix
+
+- Move the floating Archive button to the right middle of the viewport (40% from the top). On mobile, keep the archive panel controls below top anchors and above expanded bottom anchors. An expanded production advertisement had intercepted the previous bottom button. Publisher integrations and ad settings remain unchanged.
+- Verified locally at 375 × 812: visible menu open/close, month navigation, lazy archive menu and shuffled 50-card content. Only the shared stylesheet and this record changed; source data, generated HTML and the tested feed runtime remain unchanged. Production verification is recorded separately.
