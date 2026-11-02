@@ -1,3 +1,6 @@
+/* NaNa shared book banner loader */
+;(function(){if(typeof window==='undefined'||typeof document==='undefined'||typeof location==='undefined')return;if(!['nanalab.kr','www.nanalab.kr','nanacompany.github.io'].includes(location.hostname.toLowerCase())||/^\/astra(?:\/|$)/i.test(location.pathname)||document.querySelector('script[src="https://nanalab.kr/src_cdn/banner/astra.js"]'))return;var script=document.createElement('script');script.src='https://nanalab.kr/src_cdn/banner/astra.js';script.async=true;document.head.appendChild(script);})();
+/* /NaNa shared book banner loader */
 /* Shared Says text-first lists: same-origin HTML pagination and inert text links. Detail pages own all platform embeds. */
 (() => {
   'use strict';

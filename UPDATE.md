@@ -64,3 +64,10 @@
 - Added the existing Daniel Torok / White House portrait to the root home's Open Graph and Twitter metadata. The absolute HTTPS image URL, descriptive alt text, actual JPEG dimensions (1638 × 2048), image/jpeg type and summary_large_image card are generated from scripts/home-social.mjs. The original image bytes and existing source/creator/license/hash credit record are unchanged.
 - Only docs/index.html gains the new tags: 1,118 bytes. The generator applies the same helper only when writing that home page, deduplicating managed metadata. No detail, archive or search HTML was rebuilt. Removing the inserted metadata reproduces the previous home bytes and SHA-256 exactly, preserving the full body, existing publisher integrations, canonical, navigation and list data.
 - Local metadata/idempotence and future-generator scope tests passed. Per-task evidence: .tools/says-faces-20261029/trump-og.json. This entry does not itself claim a push, Pages deployment, or social-platform preview cache refresh.
+
+## 2026-11-02 — Shared book banner
+
+- Connected all public page types to `https://nanalab.kr/src_cdn/banner/astra.js`. Campaign, design, translated controls and the supplied YES24 book destination are maintained centrally in src_cdn.
+- Shared archive assets load the banner on detail/list pages; other HTML and source templates include the stable deferred loader. HTML-only generator adapters retain the connection after rebuilds and pass non-HTML values through unchanged.
+- The component is closable for the tab session, clears detected bottom navigation, and hides for modals/fullscreen/mobile input. The Astra practice site remains excluded. No additional analytics or ad-network requests are introduced by the component.
+- Existing content, routes and publisher integrations are preserved. Direct HTML changes restore exactly to the baseline when the marked loader is removed. Workspace validation/deployment evidence: `.tools/shared-book-banner-20261102/`.
