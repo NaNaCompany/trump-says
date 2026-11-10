@@ -71,3 +71,11 @@
 - Shared archive assets load the banner on detail/list pages; other HTML and source templates include the stable deferred loader. HTML-only generator adapters retain the connection after rebuilds and pass non-HTML values through unchanged.
 - The component is closable for the tab session, clears detected bottom navigation, and hides for modals/fullscreen/mobile input. The Astra practice site remains excluded. No additional analytics or ad-network requests are introduced by the component.
 - Existing content, routes and publisher integrations are preserved. Direct HTML changes restore exactly to the baseline when the marked loader is removed. Workspace validation/deployment evidence: `.tools/shared-book-banner-20261102/`.
+
+
+## 2026-11-10 — Source metadata refresh
+
+- Added 657 source-backed Truth Social metadata records from the documented CNN / Matt Stiles continuation, covering 2026-10-28 05:25:21 UTC through 2026-11-10 01:36:56 UTC. The partial archive now contains 97,741 records. X coverage is unchanged.
+- Preserved all 97,084 prior records and every original monthly chunk byte. New records are in two separate refresh chunks, with IDs, UTC timestamps, original account links, text availability and media counts only. No post bodies, transcripts, images or videos were copied. Unsupported post classifications remain unknown and missing like counts remain unknown.
+- Existing text overlays, portrait, source labels, UI, analytics, shared book banner and old detail URLs remain intact. New details retain the explicit unavailable-text/media label and official embed fallback.
+- Build and 54 Node tests passed. Full source/feed/detail/runtime validation and size evidence are recorded in evidence/refresh-20261110.json. This entry does not claim a commit, push or deployment.

@@ -97,12 +97,14 @@ for url in refs:
  assert len(locs)<=50000 and path.stat().st_size<50_000_000
  if path.name.startswith('sitemap-posts-'):post_urls+=locs
  else:navigation=locs
-assert len(post_urls)==97084 and len(set(post_urls))==97084
+assert len(post_urls)==manifest["total_records"] and len(set(post_urls))==manifest["total_records"]
 previous=[]
 for name in ('sitemap-posts-01.xml','sitemap-posts-02.xml'):
  raw=subprocess.run(['git','show','HEAD:docs/'+name],cwd=ROOT,capture_output=True,check=True).stdout
  previous.extend(n.findtext(NS+'loc') for n in ET.fromstring(raw))
-assert previous==post_urls,'Existing post URLs or order changed'
+previous_set=set(previous)
+assert previous_set.issubset(post_urls),'Existing post URLs removed'
+assert [url for url in post_urls if url in previous_set]==previous,'Existing post URL order changed'
 assert len(navigation)==len(set(navigation))
 for path in new_pages:assert 'https://nanalab.kr/trump-says/feed/'+path.name in navigation
 assert 'https://nanalab.kr/trump-says/archive-menu.html' in navigation
