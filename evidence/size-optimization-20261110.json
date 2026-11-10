@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "baseline_commit": "24eb887611c48d17a669ac74d112106de94069d1",
+  "all_html_exact_publisher_replacement": 107214,
+  "all_other_source_and_generated_files_byte_identical": 637,
+  "all_prior_paths_preserved": true,
+  "only_added_public_file": "publisher-b72ab10104e831cd.js",
+  "shared_script_sha256": "b72ab10104e831cd636cdae6b2ffebb36810d3ac69e919d82d8af64343539667",
+  "shared_script_bytes_identical_to_legacy_inline_program": true,
+  "raw_docs_bytes": 867183053,
+  "baseline_raw_docs_bytes": 998518930,
+  "raw_savings_bytes": 131335877,
+  "actual_tar_bytes": 950855680,
+  "baseline_actual_tar_bytes": 1084774400,
+  "tar_savings_bytes": 133918720,
+  "tar_headroom_to_1GiB": 122886144,
+  "node_tests_passed": 57,
+  "full_build": "passed",
+  "full_feed_validation": "passed",
+  "full_detail_validation": "passed: 97741 records",
+  "full_runtime_validation": "passed: 81936 records",
+  "publication": "Prepared only. No commit, push or deploy.",
+  "risk": "Shared synchronous program requires its same-origin asset to load. Verify asset availability with deployment. This does not establish why prior deployment timed out.",
+  "whitespace_check": {
+    "whole_tree": "Blocked: git mmap allocation error on 107214 changed HTML files, including bounded-memory retry.",
+    "generated_html": "All files exactly verified against baseline except known whitespace-free shared-script replacement.",
+    "source_tests_evidence_build_report": "git diff --check passed"
+  }
+}

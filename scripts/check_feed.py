@@ -10,6 +10,12 @@ import hashlib,json,os,re,subprocess,xml.etree.ElementTree as ET
 ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'docs'
 manifest=json.loads((ROOT/'src/data/manifest.json').read_text(encoding='utf-8'))
 likes=json.loads((ROOT/'src/data/likes.json').read_text(encoding='utf-8'))
+publisher_files=list(OUT.glob('publisher-*.js'))
+assert len(publisher_files)==1
+publisher_script=publisher_files[0].read_text(encoding='utf-8')
+publisher_tag='<script src="/trump-says/'+publisher_files[0].name+'"></script>'
+for identity in ('G-2ZYSF0173P','GTM-NV2WWQXB','ca-pub-9767176956440077','9f3423bb0d034d91bbe1a12afeff2429'):
+ assert identity in publisher_script
 all_rows=[]
 def read_chunk(chunk):
  raw=(ROOT/'src'/chunk['file']).read_bytes()
@@ -43,8 +49,8 @@ def escaped(value):return re.sub(r'[ \t]+(?=\r?\n)',lambda match:''.join('&#32;'
 
 def validate_html(text,url,detail=False):
  assert text.count('rel="canonical"')==1 and f'<link rel="canonical" href="{url}">' in text,url
- for identity in ('G-2ZYSF0173P','GTM-NV2WWQXB','ca-pub-9767176956440077','9f3423bb0d034d91bbe1a12afeff2429','googletagmanager.com/ns.html?id=GTM-NV2WWQXB'):
-  assert identity in text,(url,identity)
+ assert text.count(publisher_tag)==1,(url,'Shared publisher script missing or duplicated')
+ assert 'googletagmanager.com/ns.html?id=GTM-NV2WWQXB' in text,url
  assert 'https://nanalab.kr/apps/' in text and 'id="feed-config"' in text
  config=json.loads(re.search(r'<script type="application/json" id="feed-config">(.*?)</script>',text,re.S)[1])
  assert config['archiveMenuUrl']=='/trump-says/archive-menu.html' and config['listTextOnly'] is not detail

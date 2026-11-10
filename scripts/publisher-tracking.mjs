@@ -1,7 +1,8 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import {createHash} from 'node:crypto';
 export const IDS={ga:'G-2ZYSF0173P',gtm:'GTM-NV2WWQXB',ads:'ca-pub-9767176956440077',cf:'9f3423bb0d034d91bbe1a12afeff2429'};
-export const HEAD=`<!-- NaNa publisher integrations: GA4, GTM, AdSense, Cloudflare -->
+export const INLINE_HEAD=`<!-- NaNa publisher integrations: GA4, GTM, AdSense, Cloudflare -->
 <script>(function(){
 if(!['nanalab.kr','www.nanalab.kr','nanacompany.github.io'].includes(location.hostname.toLowerCase()))return;
 function load(src,attrs){var s=document.createElement('script');s.async=true;s.src=src;for(var k in attrs)s.setAttribute(k,attrs[k]);document.head.appendChild(s);}
@@ -14,9 +15,14 @@ load('https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ID
 function beacon(){if(document.querySelector('script[src*="static.cloudflareinsights.com/beacon.min.js"]'))return;load('https://static.cloudflareinsights.com/beacon.min.js',{'data-cf-beacon':JSON.stringify({token:'${IDS.cf}'})});}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',beacon,{once:true});else beacon();
 })();</script><!-- /NaNa publisher integrations -->`;
+// The shared asset is exactly the former inline program, without a wrapper or timing change.
+export const PUBLISHER_SCRIPT=INLINE_HEAD.match(/<script>([\s\S]*?)<\/script>/)[1];
+export const PUBLISHER_FILE='publisher-'+createHash('sha256').update(PUBLISHER_SCRIPT).digest('hex').slice(0,16)+'.js';
+export const HEAD='<!-- NaNa publisher integrations: GA4, GTM, AdSense, Cloudflare -->\n<script src="/trump-says/'+PUBLISHER_FILE+'"></script><!-- /NaNa publisher integrations -->';
 export const FALLBACK=`<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=${IDS.gtm}" height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>`;
-export function completeTracking(html){if(html.includes('NaNa publisher integrations:'))return html;return html.replace(/<\/head>/i,HEAD+'</head>').replace(/<body\b[^>]*>/i,m=>m+FALLBACK);}
+export function completeTracking(html){if(html.includes(INLINE_HEAD))return html.replace(INLINE_HEAD,HEAD);if(html.includes(HEAD))return html;if(html.includes('NaNa publisher integrations:'))throw new Error('Unrecognized publisher block; refusing to silently omit integrations');return html.replace(/<\/head>/i,HEAD+'</head>').replace(/<body\b[^>]*>/i,m=>m+FALLBACK);}
 export async function finalizePublicSite(directory,app,skipPosts=false){
+ await fs.writeFile(path.join(directory,PUBLISHER_FILE),PUBLISHER_SCRIPT);
  const files=[];
  async function walk(folder){for(const entry of await fs.readdir(folder,{withFileTypes:true})){const file=path.join(folder,entry.name);if(entry.isDirectory()){if(!(skipPosts&&entry.name==='posts'))await walk(file);}else if(entry.name.endsWith('.html'))files.push(file);}}
  await walk(directory);let cursor=0;
