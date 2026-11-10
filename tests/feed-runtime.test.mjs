@@ -87,6 +87,8 @@ class Parser{
 async function flush(){for(let i=0;i<15;i++)await Promise.resolve();}
 function setup(options={}){
  const doc=new Document(),timers=new Map(),requests=[],ios=[],mutations=[];let timerId=0;
+ // The publisher banner is already present in the page; keep its unrelated loader inert.
+ doc.body.append(make(doc,'script',{src:'https://nanalab.kr/src_cdn/banner/astra.js'}));
  const config={base:'/example-says/',origin:'https://nanalab.kr/example-says',name:'Example Says',handle:'Example',listTextOnly:true,autoEmbeds:false,allowText:true,...options.config};
  doc.body.append(make(doc,'script',{id:'feed-config',type:'application/json'},JSON.stringify(config)));
  const popular=make(doc,'ol',{id:'popular-records'}),latest=make(doc,'ol',{id:'latest-records','data-feed-items':''});
@@ -99,7 +101,7 @@ function setup(options={}){
  class IO{constructor(fn){this.fn=fn;this.targets=new Set();ios.push(this);}observe(e){this.targets.add(e);}unobserve(e){this.targets.delete(e);}fire(e){this.fn([{target:e,isIntersecting:true}]);}}
  class MO{constructor(fn){this.fn=fn;mutations.push(this);}observe(){}}
  const hostname=options.hostname||'localhost',origin=hostname==='localhost'?'http://localhost:8790':'https://'+hostname;
- const context={document:doc,location:{href:origin+'/example-says/'},URL,Intl,Date,console,DOMParser:Parser,AbortController,
+ const context={document:doc,location:new URL(origin+'/example-says/'),URL,Intl,Date,console,DOMParser:Parser,AbortController,
  setTimeout:fn=>{timers.set(++timerId,fn);return timerId;},clearTimeout:id=>timers.delete(id),
  fetch:async(url,opts)=>{requests.push({url,opts});if(options.fetch)return options.fetch(url,opts,requests.length);return {ok:true,url,headers:{get:()=> 'text/html'},text:async()=>fixturePage([row('198','2026-10-28T09:00:00Z')])};},
  addEventListener:(...args)=>doc.addEventListener(...args),innerHeight:812,MutationObserver:MO};

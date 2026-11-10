@@ -1,8 +1,10 @@
 {
   "status": "passed",
+  "all_detail_account_date_content_checked": true,
+  "nonalphanumeric_only_source_bodies": 13,
   "immutable_source_records": 97084,
   "overlay_records": 85,
-  "checked_detail_records": 85,
+  "checked_detail_records": 97084,
   "source_strings_with_encoded_line_end_whitespace": 1,
   "decoded_body_exact_source_string": true,
   "decoded_utf8_sha256_matches_source": true,

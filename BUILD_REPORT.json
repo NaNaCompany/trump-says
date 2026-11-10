@@ -14,7 +14,7 @@
     }
   ],
   "navigation_urls": 9427,
-  "generated_html_bytes": 696009824,
+  "generated_html_bytes": 707271568,
   "home_data_requests": 0,
   "home_post_rows": 120,
   "popular_posts": 100,
@@ -25,7 +25,8 @@
   "browse_timezone": "America/New_York",
   "search_recent_records": 50,
   "search_load": "only on separate search page and user request",
-  "display_policy": "text-first-lists-full-text-and-official-detail-embed",
+  "display_policy": "text-first-lists-static-account-date-content-and-official-detail-embed",
+  "detail_static_account_date_content": true,
   "list_preview_limit_codepoints": 800,
   "source_text_overlay_records": 85,
   "source_text_overlay_nonempty": 77,

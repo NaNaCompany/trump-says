@@ -1,4 +1,4 @@
-"""Check exact recovered detail text for overlays and whitespace-encoded source strings."""
+"""Check static account, date and exact source content for every detail, without embeds."""
 from concurrent.futures import ThreadPoolExecutor
 from html import unescape
 from pathlib import Path
@@ -12,17 +12,23 @@ for chunk in manifest['chunks']:
  raw=(ROOT/'src'/chunk['file']).read_bytes()
  assert hashlib.sha256(raw).hexdigest()==chunk['sha256'],chunk['file']
  rows.extend(json.loads(raw))
-selected=[];whitespace=0
+selected=[];whitespace=0;emoji_only=0
 for row in rows:
  extra=overrides.get(row['id'])
  if not row.get('text') and isinstance(extra,dict) and isinstance(extra.get('text'),str):row={**row,'text':extra['text']}
  encoded=bool(re.search(r'[ \t]+(?=\r?\n)',row.get('text') or ''))
  if encoded:whitespace+=1
- if extra or encoded:selected.append(row)
+ if row.get("text") and not any(char.isalnum() for char in row["text"]):emoji_only+=1
+ selected.append(row)
 
 def check(row):
  raw=(ROOT/'docs/posts'/(row['id'].replace(':','-')+'.html')).read_bytes()
  text=raw.decode('utf-8')
+ assert re.fullmatch(r'https://(?:x\.com|twitter\.com)/realdonaldtrump/status/\d+/?|https://truthsocial\.com/@realdonaldtrump/(?:posts/)?\d+/?',row['original_url'],re.I),('Unverified posting account',row['id'])
+ assert '<p class="post-account">Posting account: <b>Donald J. Trump</b> · @realDonaldTrump</p>' in text,('Missing posting account',row['id'])
+ assert f'Posted: <time datetime="{row["published_at"]}">' in text,('Missing posting date',row['id'])
+ assert '<h2>Post content</h2>' in text,('Missing content label',row['id'])
+ assert text.index('<h2>Post content</h2>')<text.index('id="post-embed"'),row['id']
  match=re.search(r'<blockquote class="post-text" dir="auto">(.*?)</blockquote>',text,re.S)
  if row.get('text'):
   assert match,('Missing full body',row['id'])
@@ -36,7 +42,9 @@ def check(row):
   assert extra['status'] in text and extra['source_url'] in text,row['id']
  return row['id']
 
-with ThreadPoolExecutor(max_workers=32) as pool:checked=list(pool.map(check,selected))
-report=dict(status='passed',immutable_source_records=len(rows),overlay_records=len(overrides),checked_detail_records=len(checked),source_strings_with_encoded_line_end_whitespace=whitespace,decoded_body_exact_source_string=True,decoded_utf8_sha256_matches_source=True,no_source_trimming=True,empty_media_sources_not_invented=True)
+checked=[]
+with ThreadPoolExecutor(max_workers=32) as pool:
+ for offset in range(0,len(selected),512):checked.extend(pool.map(check,selected[offset:offset+512]))
+report=dict(status='passed',all_detail_account_date_content_checked=True,nonalphanumeric_only_source_bodies=emoji_only,immutable_source_records=len(rows),overlay_records=len(overrides),checked_detail_records=len(checked),source_strings_with_encoded_line_end_whitespace=whitespace,decoded_body_exact_source_string=True,decoded_utf8_sha256_matches_source=True,no_source_trimming=True,empty_media_sources_not_invented=True)
 (ROOT/'evidence/detail-text-check.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
 print(json.dumps(report),flush=True)
